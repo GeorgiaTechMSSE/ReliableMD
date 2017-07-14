@@ -28,8 +28,8 @@ src-total-uncertainty-noabs: total uncertainty principle scheme with a fixed per
 src-ublb: lower-upper bounds scheme 
 
 For the src-cxsc, one needs to install a modified version C-XSC v2.5.4 in the cxsc-2-5-4. 
-The original website of C-XSC interval library is: http://www2.math.uni-wuppertal.de/~xsc/xsc/cxsc/apidoc/html/index.html
-However, the source code has been modified to include Kaucher (generalized) intervals, where the lowerbound can be larger than the upperbound.
+The original website of C-XSC interval library is: http://www2.math.uni-wuppertal.de/~xsc/xsc/cxsc/apidoc/html/index.html. 
+However, the source code has been modified to include Kaucher (generalized) intervals, where the lowerbound can be larger than the upperbound. 
 To install the C-XSC, please follow the instruction of the corresponding website, as described above. 
 
 The authors can be reached at anh.vt2@gatech.edu/anh.vt2@gmail.com for further question.
