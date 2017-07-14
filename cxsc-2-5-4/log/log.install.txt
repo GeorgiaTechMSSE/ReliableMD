@@ -1,0 +1,300 @@
+##                          Universitaet Wuppertal, Germany
+##
+##  This library is free software; you can redistribute it and/or
+##  modify it under the terms of the GNU Library General Public
+##  License as published by the Free Software Foundation; either
+##  version 2 of the License, or (at your option) any later version.
+##
+##  This library is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+##  Library General Public License for more details.
+##
+##  You should have received a copy of the GNU Library General Public
+##  License along with this library; if not, write to the Free
+##  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+##
+
+Type 'yes' to accept this license offer.
+Type 'no' to decline this license offer.
+
+Do you accept the terms of either license? [no] yes
+
+---------------------------------------------------------------------------------
+
+checking host system type....x86_64
+checking build system type...Linux
+
+Configuring for a x86_64-linux-gnu host.
+
+Section: Compiler
+=================
+Possible values:    gnu    for the GNU C/C++ Compiler
+                    intel  for the INTEL C/C++ Compiler
+Which C++ compiler? [gnu] gnu
+Would you like to select a special GNU C/C++ Compiler-Version? [no] yes
+C++ Compiler name (e.g. g++-4.6, /usr/local/bin/g++, etc.): 
+Would you like to use compiler optimization options? [yes] 
+Which optimization level (e.g. -O1, -O2, ...)? [-O3] 
+
+Using GNU V.4.8 Compiler
+Would you like to generate 32 or 64 Bit Code? [64] 
+
+
+Section: Rounding Operations
+============================
+Possible values: asm    for hardware support for IEEE 754 arithmetic implemented in Assembler
+                 hard   for hardware support for IEEE 754 arithmetic
+                 soft   for software emulations for directed rounded floating-point operations
+Which method? [asm] 
+
+cxscconf.h succesfully created
+
+
+Section: Prefix
+===============
+(un-)installation prefix
+e.g. /usr/local/cxsc or local home directory
+Prefix [/home/anhvt89/cxsc] 
+
+CXSC will be installed into /home/anhvt89/cxsc
+
+
+Section: Makefile
+=================
+Creating "Makefile" in /home/anhvt89/Documents/c++lib/cxsc-2-5-4 ... Done
+
+
+Section: Makefile.example
+=========================
+Creating "Makefile.example" in /home/anhvt89/Documents/c++lib/cxsc-2-5-4/examples ... Done
+
+
+Section: Library
+================
+Do you want to create a dynamic or static library? [dynamic]/static/both both
+
+Create a dynamic and static library.
+
+
+Section: Automatic Code Generation
+==================================
+Proceed with automatic code generation? [yes]/no 
+
+
+Section: Build CXSC Library
+===========================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/rts'
+make[2]: Nothing to be done for `lib'.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/rts'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/fi_lib'
+make[2]: Nothing to be done for `lib'.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/fi_lib'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make[2]: `lib' is up to date.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c dot.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [dot.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c idot.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [idot.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c cdot.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [cdot.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c cidot.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [cidot.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c interval.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [interval.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c l_real.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [l_real.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c l_rmath.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [l_rmath.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c dotio.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [dotio.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c realio.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [realio.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c l_interval.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [l_interval.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c l_imath.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [l_imath.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c complex.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [complex.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c cinterval.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [cinterval.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c rvector.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [rvector.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c cvector.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [cvector.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c ivector.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [ivector.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c civector.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [civector.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c rmatrix.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [rmatrix.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c cmatrix.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [cmatrix.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c imatrix.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [imatrix.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c cimatrix.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [cimatrix.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c l_rvector.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [l_rvector.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c l_ivector.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [l_ivector.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c l_imatrix.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [l_imatrix.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c intvector.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [intvector.o] Error 127 (ignored)
+DNO_CXSC_STATUS -I. -I.. -Irts/ -Ifi_lib/ -Iasm/ -mfpmath=sse -msse2 -fPIC -O3 -fno-strict-aliasing -c intmatrix.cpp
+make[1]: DNO_CXSC_STATUS: Command not found
+make[1]: [intmatrix.o] Error 127 (ignored)
+O3 -fno-strict-aliasing -shared -Wl,-soname,libcxsc.so.2 -o libcxsc.so.2.5.4 rts/a_abs_.o rts/a_add_.o rts/a_band.o rts/a_bclr.o rts/a_beqv.o rts/a_bmsb.o rts/a_bnot.o rts/a_bons.o rts/a_bor_.o rts/a_brtt.o rts/a_bset.o rts/a_bshf.o rts/a_btst.o rts/a_bxor.o rts/a_clck.o rts/a_div_.o rts/a_exit.o rts/a_free.o rts/a_gets.o rts/a_ival.o rts/a_ixch.o rts/a_lloc.o rts/a_mod_.o rts/a_mul_.o rts/a_nilc.o rts/a_popt.o rts/a_pptr.o rts/a_sets.o rts/a_sqr_.o rts/a_sub_.o rts/a_sval.o rts/a_syst.o rts/a_tick.o rts/a_time.o rts/a_umin.o rts/b_accu.o rts/b_acsh.o rts/b_acth.o rts/b_addc.o rts/b_addm.o rts/b_addu.o rts/b_adj.o rts/b_adpp.o rts/b_asgn.o rts/b_asin.o rts/b_asiv.o rts/b_asnh.o rts/b_atan.o rts/b_atav.o rts/b_atnh.o rts/b_baad.o rts/b_bacm.o rts/b_badd.o rts/b_badj.o rts/b_ball.o rts/b_banx.o rts/b_basu.o rts/b_bcad.o rts/b_bcat.o rts/b_bcdi.o rts/b_bcid.o rts/b_bclr.o rts/b_bcmp.o rts/b_bcpy.o rts/b_bcsu.o rts/b_bdiv.o rts/b_bdvn.o rts/b_bini.o rts/b_biv2.o rts/b_biv_.o rts/b_bivp.o rts/b_bldx.o rts/b_blgx.o rts/b_bmat.o rts/b_bmcm.o rts/b_bmdv.o rts/b_bms1.o rts/b_bms2.o rts/b_bmsh.o rts/b_bmsp.o rts/b_bmts.o rts/b_bmul.o rts/b_bmun.o rts/b_bnxt.o rts/b_bpnt.o rts/b_brnd.o rts/b_bshf.o rts/b_bsub.o rts/b_busp.o rts/b_chck.o rts/b_cmcp.o rts/b_comp.o rts/b_conf.o rts/b_coni.o rts/b_cos_.o rts/b_cosh.o rts/b_cot_.o rts/b_coth.o rts/b_cscn.o rts/b_deko.o rts/b_dtol.o rts/b_errr.o rts/b_exp_.o rts/b_expe.o rts/b_form.o rts/b_geta.o rts/b_gini.o rts/b_glbl.o rts/b_heap.o rts/b_ifrm.o rts/b_inv1.o rts/b_inv2.o rts/b_irnd.o rts/b_kapp.o rts/b_lnva.o rts/b_lnve.o rts/b_log_.o rts/b_loga.o rts/b_ltod.o rts/b_ltor.o rts/b_mdiv.o rts/b_muad.o rts/b_op88.o rts/b_out.o rts/b_outf.o rts/b_outi.o rts/b_outm.o rts/b_pi__.o rts/b_pign.o rts/b_pool.o rts/b_popt.o rts/b_pow_.o rts/b_prod.o rts/b_rnd.o rts/b_rndd.o rts/b_rndn.o rts/b_rndu.o rts/b_rtol.o rts/b_scan.o rts/b_shl1.o rts/b_shlu.o rts/b_shr1.o rts/b_shru.o rts/b_sico.o rts/b_sin_.o rts/b_sinh.o rts/b_snhv.o rts/b_sqrt.o rts/b_sqrv.o rts/b_subc.o rts/b_subm.o rts/b_subu.o rts/b_tadd.o rts/b_tadj.o rts/b_tan_.o rts/b_tanh.o rts/b_tcom.o rts/b_tdek.o rts/b_tdiv.o rts/b_test.o rts/b_text.o rts/b_tmdv.o rts/b_tmpf.o rts/b_tmul.o rts/b_trnd.o rts/b_tsub.o rts/c_cadd.o rts/c_csub.o rts/c_dadd.o rts/c_dsta.o rts/c_dsub.o rts/c_padd.o rts/c_psub.o rts/c_rcad.o rts/c_rcsb.o rts/c_scps.o rts/c_scpy.o rts/c_stad.o rts/c_stan.o rts/c_stau.o rts/d_ass.o rts/d_assc.o rts/d_assi.o rts/d_assz.o rts/d_chs.o rts/d_clr.o rts/d_dadd.o rts/d_dsub.o rts/d_eq.o rts/d_free.o rts/d_ge.o rts/d_gt.o rts/d_init.o rts/d_le.o rts/d_lt.o rts/d_ne.o rts/d_padd.o rts/d_psub.o rts/d_radd.o rts/d_rsub.o rts/d_sign.o rts/d_stad.o rts/d_stan.o rts/d_stau.o rts/d_temp.o rts/d_utmp.o rts/d_vlcp.o rts/e_actn.o rts/e_back.o rts/e_bmsg.o rts/e_data.o rts/e_ieee.o rts/e_ienv.o rts/e_popp.o rts/e_push.o rts/e_tmrt.o rts/e_tmsg.o rts/e_tprt.o rts/e_trap.o rts/e_xall.o rts/e_xarg.o rts/e_xdbz.o rts/e_xine.o rts/e_xiob.o rts/e_xiop.o rts/e_xios.o rts/e_xnor.o rts/e_xofl.o rts/e_xset.o rts/e_xufl.o rts/f_args.o rts/f_assg.o rts/f_back.o rts/f_bhex.o rts/f_eofp.o rts/f_exst.o rts/f_flsh.o rts/f_free.o rts/f_get_.o rts/f_getc.o rts/f_op88.o rts/f_popt.o rts/f_put_.o rts/f_putc.o rts/f_quer.o rts/f_rdf1.o rts/f_rdh1.o rts/f_rdi1.o rts/f_rdl1.o rts/f_rdl2.o rts/f_rdln.o rts/f_rdr1.o rts/f_rdr2.o rts/f_rds1.o rts/f_rdv1.o rts/f_read.o rts/f_rhex.o rts/f_rint.o rts/f_rset.o rts/f_rstn.o rts/f_rwri.o rts/f_rwrn.o rts/f_sexs.o rts/f_srse.o rts/f_srwi.o rts/f_whex.o rts/f_wint.o rts/f_wrb1.o rts/f_wrb2.o rts/f_wrc1.o rts/f_wrc2.o rts/f_wrd1.o rts/f_wrf1.o rts/f_wrf2.o rts/f_wrf3.o rts/f_wrf4.o rts/f_wrh1.o rts/f_wrh2.o rts/f_wri1.o rts/f_wri2.o rts/f_wrid.o rts/f_writ.o rts/f_wrl1.o rts/f_wrl2.o rts/f_wrl3.o rts/f_wrl4.o rts/f_wrln.o rts/f_wrr1.o rts/f_wrr2.o rts/f_wrr3.o rts/f_wrr4.o rts/f_wrs1.o rts/f_wrs2.o rts/i_acos.o rts/i_acot.o rts/i_acsh.o rts/i_acth.o rts/i_asin.o rts/i_asnh.o rts/i_atan.o rts/i_atnh.o rts/i_cns2.o rts/i_cnst.o rts/i_cos.o rts/i_cosh.o rts/i_cot.o rts/i_coth.o rts/i_dadd.o rts/i_dsta.o rts/i_dsub.o rts/i_ep10.o rts/i_exp.o rts/i_exp2.o rts/i_iadd.o rts/i_ista.o rts/i_isub.o rts/i_lg10.o rts/i_log.o rts/i_log2.o rts/i_loga.o rts/i_padd.o rts/i_pow.o rts/i_psub.o rts/i_read.o rts/i_riad.o rts/i_risb.o rts/i_scps.o rts/i_scpy.o rts/i_sin.o rts/i_sinh.o rts/i_sqrt.o rts/i_tan.o rts/i_tanh.o rts/l_abs.o rts/l_acos.o rts/l_acot.o rts/l_acsh.o rts/l_acth.o rts/l_addc.o rts/l_addd.o rts/l_addu.o rts/l_asin.o rts/l_asnh.o rts/l_ass.o rts/l_atan.o rts/l_atn2.o rts/l_atnh.o rts/l_comp.o rts/l_conv.o rts/l_cos.o rts/l_cosh.o rts/l_cot.o rts/l_coth.o rts/l_divc.o rts/l_divd.o rts/l_divu.o rts/l_eq.o rts/l_exct.o rts/l_exp.o rts/l_expo.o rts/l_flot.o rts/l_free.o rts/l_ge.o rts/l_gt.o rts/l_init.o rts/l_le.o rts/l_log.o rts/l_loga.o rts/l_lt.o rts/l_mant.o rts/l_mlen.o rts/l_mulc.o rts/l_muld.o rts/l_mulu.o rts/l_ne.o rts/l_pow.o rts/l_prec.o rts/l_pred.o rts/l_read.o rts/l_rond.o rts/l_rprc.o rts/l_rval.o rts/l_sign.o rts/l_sin.o rts/l_sinh.o rts/l_sqrt.o rts/l_subc.o rts/l_subd.o rts/l_subu.o rts/l_succ.o rts/l_tan.o rts/l_tanh.o rts/l_temp.o rts/l_trun.o rts/l_ttmp.o rts/l_umin.o rts/l_utmp.o rts/l_vlcp.o rts/l_whex.o rts/l_writ.o rts/o_user.o rts/p_init.o rts/r_abs.o rts/r_acos.o rts/r_acot.o rts/r_acsh.o rts/r_acth.o rts/r_addd.o rts/r_addn.o rts/r_addu.o rts/r_asin.o rts/r_asnh.o rts/r_ass.o rts/r_atan.o rts/r_atn2.o rts/r_atnh.o rts/r_aval.o rts/r_ceil.o rts/r_clss.o rts/r_cnsd.o rts/r_cnst.o rts/r_cnsu.o rts/r_comp.o rts/r_conv.o rts/r_cos.o rts/r_cosh.o rts/r_cot.o rts/r_coth.o rts/r_divd.o rts/r_divn.o rts/r_divu.o rts/r_ep10.o rts/r_eq.o rts/r_exp.o rts/r_exp2.o rts/r_expo.o rts/r_fini.o rts/r_flor.o rts/r_flot.o rts/r_frac.o rts/r_ftrp.o rts/r_ge.o rts/r_gt.o rts/r_le.o rts/r_lg10.o rts/r_log.o rts/r_log2.o rts/r_loga.o rts/r_lt.o rts/r_mant.o rts/r_muld.o rts/r_muln.o rts/r_mulu.o rts/r_ne.o rts/r_outp.o rts/r_pcmp.o rts/r_pow.o rts/r_pred.o rts/r_rdcr.o rts/r_read.o rts/r_rond.o rts/r_rval.o rts/r_scps.o rts/r_scpy.o rts/r_sign.o rts/r_sin.o rts/r_sinh.o rts/r_sqr_.o rts/r_sqrt.o rts/r_subd.o rts/r_subn.o rts/r_subu.o rts/r_succ.o rts/r_sval.o rts/r_tan.o rts/r_tanh.o rts/r_trun.o rts/r_umin.o rts/r_valu.o rts/r_writ.o rts/s_aacc.o rts/s_aaeq.o rts/s_aage.o rts/s_aagt.o rts/s_aain.o rts/s_aale.o rts/s_aalt.o rts/s_aane.o rts/s_accc.o rts/s_aceq.o rts/s_acge.o rts/s_acgt.o rts/s_acle.o rts/s_aclt.o rts/s_acne.o rts/s_add.o rts/s_aimg.o rts/s_alen.o rts/s_asgn.o rts/s_cacc.o rts/s_caeq.o rts/s_cage.o rts/s_cagt.o rts/s_cain.o rts/s_cale.o rts/s_calt.o rts/s_cane.o rts/s_char.o rts/s_conc.o rts/s_cons.o rts/s_cpos.o rts/s_cseq.o rts/s_csge.o rts/s_csgt.o rts/s_csle.o rts/s_cslt.o rts/s_csne.o rts/s_date.o rts/s_eteq.o rts/s_etge.o rts/s_etgt.o rts/s_etin.o rts/s_etle.o rts/s_etlt.o rts/s_etne.o rts/s_free.o rts/s_genv.o rts/s_init.o rts/s_ins1.o rts/s_ins2.o rts/s_int_.o rts/s_inxc.o rts/s_ixch.o rts/s_ixcn.o rts/s_len_.o rts/s_mul.o rts/s_real.o rts/s_rhex.o rts/s_sceq.o rts/s_scge.o rts/s_scgt.o rts/s_scle.o rts/s_sclt.o rts/s_scne.o rts/s_slen.o rts/s_spos.o rts/s_sseq.o rts/s_ssge.o rts/s_ssgt.o rts/s_ssle.o rts/s_sslt.o rts/s_ssne.o rts/s_stat.o rts/s_sub.o rts/s_suba.o rts/s_subs.o rts/s_temp.o rts/s_utmp.o rts/s_vlcp.o rts/s_whex.o rts/s_zero.o rts/t_abse.o rts/t_acos.o rts/t_acot.o rts/t_acsh.o rts/t_acth.o rts/t_acvt.o rts/t_asin.o rts/t_asnh.o rts/t_asvt.o rts/t_atan.o rts/t_atn2.o rts/t_atnh.o rts/t_cha1.o rts/t_cha2.o rts/t_cher.o rts/t_chi1.o rts/t_chi2.o rts/t_chiv.o rts/t_chk1.o rts/t_chse.o rts/t_cmpe.o rts/t_cnst.o rts/t_conv.o rts/t_cos.o rts/t_cosh.o rts/t_cot.o rts/t_coth.o rts/t_cpye.o rts/t_ctoe.o rts/t_dadd.o rts/t_das_.o rts/t_dcmp.o rts/t_dcnv.o rts/t_dcpy.o rts/t_dcst.o rts/t_deml.o rts/t_dhi1.o rts/t_dhi2.o rts/t_dhl1.o rts/t_dhl2.o rts/t_dmsc.o rts/t_dmul.o rts/t_dnrm.o rts/t_dsub.o rts/t_ecst.o rts/t_ehi1.o rts/t_ehi2.o rts/t_ehl1.o rts/t_ehl2.o rts/t_etoa.o rts/t_etoi.o rts/t_ex10.o rts/t_exme.o rts/t_exp.o rts/t_exp2.o rts/t_glbl.o rts/t_gtrg.o rts/t_iaah.o rts/t_iabs.o rts/t_iabt.o rts/t_iacs.o rts/t_iact.o rts/t_ianh.o rts/t_iash.o rts/t_iasn.o rts/t_iath.o rts/t_iatn.o rts/t_ichs.o rts/t_icos.o rts/t_icot.o rts/t_icpe.o rts/t_icsh.o rts/t_icth.o rts/t_ie10.o rts/t_iex2.o rts/t_iexp.o rts/t_il10.o rts/t_ilg2.o rts/t_ilog.o rts/t_ipow.o rts/t_irnd.o rts/t_is_c.o rts/t_isin.o rts/t_isnh.o rts/t_isqt.o rts/t_itan.o rts/t_itnh.o rts/t_lg10.o rts/t_lnpe.o rts/t_log.o rts/t_log2.o rts/t_md2e.o rts/t_merr.o rts/t_mtyp.o rts/t_mupi.o rts/t_pow.o rts/t_rtrg.o rts/t_s2xm.o rts/t_s_ei.o rts/t_s_ln.o rts/t_s_lp.o rts/t_satn.o rts/t_scee.o rts/t_sico.o rts/t_sin.o rts/t_sinh.o rts/t_sinv.o rts/t_sle_.o rts/t_sqme.o rts/t_sqrt.o rts/t_sqt_.o rts/t_srnd.o rts/t_ssin.o rts/t_stan.o rts/t_tan.o rts/t_tanh.o rts/t_tnct.o rts/t_xtpe.o rts/t_xtre.o rts/y_alck.o rts/y_asgn.o rts/y_free.o rts/y_inid.o rts/y_init.o rts/y_inxn.o rts/y_ixch.o rts/y_ixcn.o rts/y_new.o rts/y_stat.o rts/y_suba.o rts/y_temp.o rts/y_utmp.o rts/y_vlcp.o rts/y_ynxn.o rts/y_yxch.o rts/y_yxcn.o rts/z_ciad.o rts/z_cisb.o rts/z_czad.o rts/z_czsb.o rts/z_dadd.o rts/z_dsta.o rts/z_dsub.o rts/z_izad.o rts/z_izsb.o rts/z_padd.o rts/z_psub.o rts/z_rzad.o rts/z_rzsb.o rts/z_scps.o rts/z_scpy.o rts/z_zadd.o rts/z_zsta.o rts/z_zsub.o ../CToolbox/Modules/rpoly.o ../CToolbox/Modules/rpeval.o ../CToolbox/Modules/ddf_ari.o ../CToolbox/Modules/xi_ari.o ../CToolbox/Modules/nlfzero.o ../CToolbox/Modules/expreval.o ../CToolbox/Modules/matinv.o ../CToolbox/Modules/linsys.o ../CToolbox/Modules/lst1_ari.o ../CToolbox/Modules/gop1.o ../CToolbox/Modules/grad_ari.o ../CToolbox/Modules/hess_ari.o ../CToolbox/Modules/nlinsys.o ../CToolbox/Modules/lst_ari.o ../CToolbox/Modules/gop.o ../CToolbox/Modules/rev_simp.o ../CToolbox/Modules/set_ari.o ../CToolbox/Modules/lop_ari.o ../CToolbox/Modules/lop.o ../CToolbox/Modules/ci_util.o ../CToolbox/Modules/cpoly.o ../CToolbox/Modules/cipoly.o ../CToolbox/Modules/cpzero.o ../CToolbox/Modules/fastlss.o dot.o idot.o cdot.o cidot.o real.o rmath.o interval.o imath.o l_real.o l_rmath.o l_complex.o l_cinterval.o l_cimath.o l_cmath.o ioflags.o dotio.o realio.o l_interval.o l_imath.o complex.o cinterval.o rvector.o cvector.o ivector.o civector.o srvector.o sivector.o scvector.o scivector.o rmatrix.o cmatrix.o imatrix.o cimatrix.o srmatrix.o simatrix.o scmatrix.o scimatrix.o l_rvector.o l_ivector.o l_rmatrix.o l_imatrix.o intvector.o intmatrix.o cimath.o except.o lx_real.o lx_interval.o lx_complex.o lx_cinterval.o lx_ivector.o lx_civector.o fi_lib/j_erf.o fi_lib/j_acos.o fi_lib/j_acsh.o fi_lib/j_acot.o fi_lib/j_acth.o fi_lib/j_asin.o fi_lib/j_asnh.o fi_lib/j_atan.o fi_lib/j_atnh.o fi_lib/j_cos.o fi_lib/j_cosh.o fi_lib/j_cot.o fi_lib/j_coth.o fi_lib/j_exp.o fi_lib/j_ex10.o fi_lib/j_exp2.o fi_lib/j_expm.o fi_lib/j_log.o fi_lib/j_lg10.o fi_lib/j_lg1p.o fi_lib/j_log2.o fi_lib/j_sin.o fi_lib/j_sinh.o fi_lib/j_sqr.o fi_lib/j_sqrt.o fi_lib/j_tan.o fi_lib/j_tanh.o fi_lib/q_erf.o  fi_lib/q_acos.o fi_lib/q_acsh.o fi_lib/q_acot.o fi_lib/q_acth.o fi_lib/q_asin.o fi_lib/q_asnh.o fi_lib/q_atan.o fi_lib/q_atnh.o fi_lib/q_atn1.o fi_lib/q_cos.o fi_lib/q_cos1.o fi_lib/q_cosh.o fi_lib/q_cot.o fi_lib/q_coth.o fi_lib/q_ep1.o fi_lib/q_epm1.o fi_lib/q_exp.o fi_lib/q_ex10.o fi_lib/q_exp2.o fi_lib/q_expm.o fi_lib/q_log.o fi_lib/q_glbl.o fi_lib/q_log1.o fi_lib/q_lg10.o fi_lib/q_log2.o fi_lib/q_pred.o fi_lib/q_rtrg.o fi_lib/q_sin.o fi_lib/q_sin1.o fi_lib/q_sinh.o fi_lib/q_sqr.o fi_lib/q_sqrt.o fi_lib/q_succ.o fi_lib/q_tan.o fi_lib/q_tanh.o fi_lib/q_cth1.o fi_lib/q_scan.o fi_lib/q_prnt.o fi_lib/q_ari.o fi_lib/q_errm.o fi_lib/q_comp.o fi_lib/fi_lib_funcs.o 
+make[1]: O3: Command not found
+make[1]: [libcxsc.so] Error 127 (ignored)
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+
+Section: Install CXSC Library
+=============================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+/usr/bin/install -d /home/anhvt89/cxsc/include
+/usr/bin/install -m 644 ./*.hpp ./*.inl ./*.h /home/anhvt89/cxsc/include
+/usr/bin/install -m 644 rts/*.h /home/anhvt89/cxsc/include
+/usr/bin/install -m 644 fi_lib/*.hpp /home/anhvt89/cxsc/include
+/usr/bin/install -m 644 asm/r_ari.h /home/anhvt89/cxsc/include
+/usr/bin/install -m 644 ../cxscconf.h /home/anhvt89/cxsc/include
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+/usr/bin/install -d /home/anhvt89/cxsc/include
+/usr/bin/install -m 644 Modules/*.hpp  /home/anhvt89/cxsc/include
+/usr/bin/install -m 644 Modules/*.inl  /home/anhvt89/cxsc/include
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+/usr/bin/install -d /home/anhvt89/cxsc/lib
+rm -f /home/anhvt89/cxsc/liblibcxsc*
+/usr/bin/install -m 644 ./libcxsc.so.2.5.4 /home/anhvt89/cxsc/lib
+/usr/bin/install: cannot stat ‘./libcxsc.so.2.5.4’: No such file or directory
+make[1]: *** [install_dyn] Error 1
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+make: *** [install] Error 2
+
+Section: Build CXSC Library Examples
+====================================
+cd examples;  -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -I.. -I../src -I../src/rts -I../src/fi_lib -I../src/asm -L../src -o example example.cpp -lcxsc
+/bin/sh: 1: -mfpmath=sse: not found
+make: *** [example] Error 127
+
+Section: Build CXSC Toolbox Programs
+====================================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+o Programs/cpz_ex Programs/cpz_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [cpz_ex] Error 127 (ignored)
+o Programs/ddf_ex Programs/ddf_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [ddf_ex] Error 127 (ignored)
+o Programs/gop_ex Programs/gop_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [gop_ex] Error 127 (ignored)
+o Programs/gop1_ex Programs/gop1_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [gop1_ex] Error 127 (ignored)
+o Programs/hess_ex Programs/hess_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [hess_ex] Error 127 (ignored)
+o Programs/jac_ex Programs/jac_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [jac_ex] Error 127 (ignored)
+o Programs/lop_ex Programs/lop_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [lop_ex] Error 127 (ignored)
+o Programs/lss_ex Programs/lss_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [lss_ex] Error 127 (ignored)
+o Programs/nlfz_ex Programs/nlfz_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [nlfz_ex] Error 127 (ignored)
+o Programs/nlss_ex Programs/nlss_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [nlss_ex] Error 127 (ignored)
+o Programs/rpe_ex Programs/rpe_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [rpe_ex] Error 127 (ignored)
+o Programs/xev_ex1 Programs/xev_ex1.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [xev_ex1] Error 127 (ignored)
+o Programs/xev_ex2 Programs/xev_ex2.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [xev_ex2] Error 127 (ignored)
+o Programs/xev_ex3 Programs/xev_ex3.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [xev_ex3] Error 127 (ignored)
+o Programs/fastlss_ex Programs/fastlss_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [fastlss_ex] Error 127 (ignored)
+all toolbox sample programs are (now) up-to-date
+
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+
+Section: Install CToolbox
+=========================
+/usr/bin/install -d /home/anhvt89/cxsc/examples
+/usr/bin/install: cannot stat ‘example’: No such file or directory
+make: *** [install_examples] Error 1
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+/usr/bin/install -d /home/anhvt89/cxsc/examples
+/usr/bin/install: cannot stat ‘cpz_ex’: No such file or directory
+make[1]: *** [installprog] Error 1
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make: *** [installprog] Error 2
+
+Section: Test CToolbox
+============================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+o test/tester -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing test/tester.cpp -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+make[1]: o: Command not found
+make[1]: [tester] Error 127 (ignored)
+I../ -o test/sumup test/sumup.cpp 
+make[1]: I../: Command not found
+make[1]: [sumup] Error 127 (ignored)
+(Programs/cpz_ex < Programs/cpz_ex.in1) > test/cpz_ex.out1
+/bin/sh: 1: Programs/cpz_ex: not found
+make[1]: *** [test] Error 127
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make: *** [toolboxtest_dyn] Error 2
+
+Section: CXSC Results
+=====================
+Library successfully created
+Examples not successfully created
+Library successfully installed
+
+
+Section: CToolbox Results
+=========================
+Examples successfully created
+Library and programs not successfully installed and tested
+

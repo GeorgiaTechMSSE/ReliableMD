@@ -1,0 +1,22 @@
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+o Programs/cpz_ex Programs/cpz_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/ddf_ex Programs/ddf_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/gop_ex Programs/gop_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/gop1_ex Programs/gop1_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/hess_ex Programs/hess_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/jac_ex Programs/jac_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/lop_ex Programs/lop_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/lss_ex Programs/lss_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/nlfz_ex Programs/nlfz_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/nlss_ex Programs/nlss_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/rpe_ex Programs/rpe_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/xev_ex1 Programs/xev_ex1.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/xev_ex2 Programs/xev_ex2.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/xev_ex3 Programs/xev_ex3.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+o Programs/fastlss_ex Programs/fastlss_ex.cpp -I/home/anhvt89/cxsc/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -L/home/anhvt89/cxsc/lib -lcxsc
+all toolbox sample programs are (now) up-to-date
+
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make[1]: o: Command not found
+make[1]: [fastlss_ex] Error 127 (ignored)
+

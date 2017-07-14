@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3    CMakeFiles/cpz_test.dir/cpz_test.o  -o cpz_test -rdynamic ../../../libcxsc.so.2.5.4 -Wl,-rpath,/home/anhvt89/Documents/c++lib/cxsc-2-5-4 

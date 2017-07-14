@@ -1,0 +1,24 @@
+Verified Solvers for parametric linear systems
+==============================================
+
+Quick installation instructions:
+
+Requirements:
+-C-XSC version 2.5.4 or higher
+-C++ Compiler with OpenMP capabilities recommended
+-Optimized BLAS and LAPACK libraries recommended
+
+
+Installation:
+-Rename the file Makefile.generic to Makefile 
+-Edit the file according to your needs by following the explanations
+ in the file
+-Type "make lib" to compile the solver library, or just
+ "make" to compile the library and the examples
+-After compilation the library will reside in the lib
+ directory, the needed header files in the include directory
+ and the compiled example program in the bin directory
+
+Take a look at the example files for usage details.
+
+

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3    CMakeFiles/rpe_test.dir/rpe_test.o  -o rpe_test -rdynamic ../../../libcxsc.so.2.5.4 -Wl,-rpath,/home/anhvt89/Documents/c++lib/cxsc-2-5-4 

@@ -1,0 +1,67 @@
+Version 0.4.2
+=============
+
+-Added matrix mode for K=1, improving speed for multiple right hand sides and result quality. See documentation.
+-Several bug fixes concerning data distribution and non-square systems.
+-Increased buffer length for MPI communications. Old setting could lead to MPI communication errors in some situations.
+
+
+Version 0.4.1
+=============
+
+-ATTENTION! The interface has again been slightly modified. Please consult the documentation and example programs.
+-Some bugs in the computation of the inner enclosures have been corrected.
+-Optional iterative refinement step added.
+-Some further configuration options have been added.
+
+
+Version 0.4
+=============
+
+-ATTENTION! New interface: Solvers use a struct for configuration options. See example programs and documentation.
+-Solvers can now also compute inner enclosures.
+-Fixed some bugs with the Intel compiler and Intel MPI.
+
+
+Version 0.3.1
+=============
+
+-Fixed some bugs in the C-XSC MPI Interface that could lead to MPI truncation errros and adapted the solver accordingly.
+
+
+Version 0.3
+=============
+
+-Serial solvers have been moved directly into C-XSC and are now longer a part of this package.
+-Solvers have been adapted to use new features of C-XSC 2.4.0 (this is now the minimum required version).
+-Now uses new C-XSC MPI Interface for C-XSC 2.4.0.
+-Some minor bug fixes.
+
+
+Version 0.2.1
+=============
+
+-Added configuration flag to file lss.inc to set naming conventions when calling a Fortran function from C/C++.
+-Added configuration flag to file lss.inc to set tool to create static libraries.
+-Fixed a bug in the data distribution for stage two of the solver.
+-Changed parallel examples to make usage more clear.
+-Improved compatibility with HP compiler.
+-Some minor bug fixes and improvements.
+
+
+Version 0.2
+===========
+
+-Fixed a bug in the C-XSC MPI package when using the Intel C++ Compiler.
+-Enhanced compatibility with C-XSC 2.2.3.
+-Right hand side and solution are now matrices (support for multiple right hand sides).
+-Solvers are now compiled into libraries for easier use in user programs.
+-Serial solvers now support OpenMP.
+-Solvers are now implemented as templates (same source for all datatypes).
+-Some small bug fixes and performance improvements.
+
+
+Version 0.1
+===========
+
+Initial version 

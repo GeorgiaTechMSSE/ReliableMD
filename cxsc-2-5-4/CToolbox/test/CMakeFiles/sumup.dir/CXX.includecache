@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox/test/sumup.cpp
+cstdlib
+-
+iostream
+-
+fstream
+-
+cxscconf.h
+/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox/test/cxscconf.h
+conio.h
+-
+
+cxscconf.h
+

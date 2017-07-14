@@ -1,0 +1,45 @@
+MPI Interface for C-XSC data types
+Version: 27.09.2011
+
+Purpose:
+When writing MPI programs using C-XSC, this interface allows
+to use C-XSC data types (like interval, imatrix, cvector etc.)
+with the standard MPI communication routines.
+
+Files:
+cxsc_mpicomm.hpp      Header file for MPI communication routines
+cxsc_mpicomm.cpp      Implementation of routines
+cxsc_mpi_example.cpp  Example program
+Makefile              Makefile to compile the example
+
+Usage:
+Include the Header cxsc_mpicomm.hpp in your program. When compiling,
+also compile and link to cxsc_mpicomm.cpp and the mpi library. The 
+usage of the communication functions is the same as for standard data 
+types. The file cxsc_mpi_example.cpp contains a simple example.
+
+
+ATTENTION:
+==========
+
+Contrary to older versions, you need to initialize the communication buffer by calling
+
+init_CXSC_MPI(); //initializes buffer of default size
+
+or 
+
+init_CXSC_MPI(int n); //initializes buffer with n bytes
+
+before the first MPI communication function using a C-XSC data type is called. 
+The needed buffer size depends on the maximum amount of raw data you want to 
+send. In many cases the default size should be sufficient. However, if you get
+an MPI truncation error during execution of your programm the buffer size is 
+most likely to small and should be increased.
+
+When you do not need to use MPI communication functions for C-XSC data type 
+anymore, you should call 
+
+finish_CXSC_MPI();
+
+to free the memory for the communication buffer.
+

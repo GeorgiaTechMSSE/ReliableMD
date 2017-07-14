@@ -1,0 +1,11 @@
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/rts'
+make[2]: Nothing to be done for `lib'.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/rts'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/fi_lib'
+make[2]: Nothing to be done for `lib'.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/fi_lib'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make[2]: `lib' is up to date.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'

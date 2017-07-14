@@ -1,0 +1,53 @@
+// #include "example.hpp"
+#include "real.hpp"
+#include "imatrix.hpp"
+#include "ivector.hpp"
+#include "interval.hpp"  // predefined interval arithmetic
+#include "rvector.hpp"
+#include "l_interval.hpp"
+#include <iostream>
+using namespace cxsc;
+using namespace std;
+
+int main()
+{
+  // test construct/destruct ivector
+  // idea: use Resize() function for dynamically-allocated memory
+  // status: work but not fully properly functional, e.g. VecLen() is not working)
+  cout << endl;
+  ivector* x_ivector;
+  x_ivector = new ivector[7];
+  // cout << "length of x_ivector (after defined) = " << VecLen(*x_ivector) << endl;
+  for (int i = 0; i < 7; i++) {
+    Resize(x_ivector[i],1);
+    x_ivector[i] = interval(3*i,-2*i);
+    // x_ivector[i] = 2*i;
+    // cout << "finished assignment" << endl;
+    cout << "2*x_ivector[" << i << "] = " << 2*x_ivector[i] << endl;
+    // if (x_ivector[i]==NULL) {
+    //   cout << "NULL @ [" << i << "] component;" << endl;
+    //   cout << endl;
+    // }
+  }
+
+  interval* x_interval;
+  x_interval = new interval(0.0);
+  cout << SetPrecision(18,15);
+  cout << "*x_interval = " << *x_interval << endl;
+  cout << "exp(*x_interval) = " << exp(*x_interval) << endl;
+
+  interval a = interval(3,1);
+  interval b = interval(1,4);
+
+  cout << endl;
+  cout << "a = " << a << endl;
+  cout << "b = " << b << endl;
+  cout << "a-b = " << a-b << endl;
+
+  cout << "-a = " << -a << endl;
+
+  delete [] x_ivector;
+  delete x_interval;
+
+  cout << endl;
+}

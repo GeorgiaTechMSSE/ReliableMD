@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3    CMakeFiles/xev_test2.dir/xev_test2.o  -o xev_test2 -rdynamic ../../../libcxsc.so.2.5.4 -Wl,-rpath,/home/anhvt89/Documents/c++lib/cxsc-2-5-4 

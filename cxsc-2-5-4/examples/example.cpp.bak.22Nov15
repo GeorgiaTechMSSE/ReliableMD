@@ -1,0 +1,248 @@
+// #include "example.hpp"
+#include "real.hpp"
+#include "imatrix.hpp"
+#include "ivector.hpp"
+#include "interval.hpp"  // predefined interval arithmetic
+#include "rvector.hpp"
+#include "l_interval.hpp"
+#include <iostream>
+using namespace cxsc;
+using namespace std;
+
+int main()
+{
+  // c: there are 3 main classes to be test in this case: interval; ivector; imatrix
+  // cout << "NOTE: Double-check Kaucher arithmetic in modified C-XSC library" << endl;
+  // interval x,y,xtest;
+  // x = interval(-3,7);
+  // y = interval(-2,-10);
+
+  // xtest = x;
+  // cout << " x = " << x << endl;
+  // cout << " y = " << y << endl;
+  // cout << " xtest = " << xtest << endl;
+  // cout << "x*y = " << x*y << endl;
+  // cout << "diam(x) = " << diam(x) << endl;
+  // cout << "diam(y) = " << diam(y) << endl;
+  // cout << "radi(x) = " << radi(x) << endl;
+  // cout << "radi(y) = " << radi(y) << endl;
+
+  // cout << endl;
+  // cout << endl;
+  // *********************************************************************************************
+  // compute the length of a vector using sizeof()
+  // double vector7[7];
+  // int i;
+  // for (i = 0; i < 7; i++) vector7[i] = 10*i;
+  // cout << "length(vector7) = " << sizeof(vector7)/sizeof(vector7[1]) << endl;
+
+  // *********************************************************************************************  
+  cout << endl;
+  interval z;
+  z = 3;
+  cout << "z = " << z << endl;
+  ivector ivector_z(3);  
+  int flag = 1;
+  for (int index = 0; index < 3; index++) {
+    // Resize(ivector_z[index],1);
+    ivector_z[index+1] = interval(index-0.5,index+0.5);
+    cout << "ivector[" << index+1 << "] = " << ivector_z[index+1] << endl;
+    cout << "1A. size of ivector_z = " << VecLen(ivector_z) << endl;
+  }  
+  cout << endl;  
+  cout << "1B. size of ivector_z = " << VecLen(ivector_z) << endl;
+  cout << "Lb(ivector_z) = " << Lb(ivector_z) << endl;
+  cout << "Ub(ivector_z) = " << Ub(ivector_z) << endl;
+  // *********************************************************************************************
+  // test construct/destruct real class
+  // cout << endl;
+  // *********************************************************************************************
+  // test construct/destruct interval/ivector/imatrix class
+  // cout << endl;
+  // interval* x_interval;
+  // double *x_interval_lb = new double;
+  // double *x_interval_ub = new double;
+  // *x_interval_ub = 1.0; *x_interval_lb = -2.0;
+  // x_interval = new interval(*x_interval_lb,*x_interval_ub);
+  // cout << "x_interval = " << *x_interval << endl;
+  // cout << "delete dynamic mem..." << endl;
+  // delete x_interval;
+  // cout << "check if x_interval is deleted?" << endl;
+  // cout << "x_interval = " << *x_interval << endl;
+  // delete x_interval_lb; 
+  // delete x_interval_ub;
+  // cout << "*x_interval_lb = " << *x_interval_lb << endl;
+  // cout << "*x_interval_ub = " << *x_interval_ub << endl;
+  // *x_interval = interval(*x_interval_lb, *x_interval_ub);
+  // cout << "x_interval = " << *x_interval << endl;
+  // int flag;
+  // if (*x_interval_lb != NULL) flag = 1;
+  // else flag = 0;
+  // if (flag == 0) cout << "*x_interval_lb is a NULL pointer " << endl;
+  // else cout << "*x_interval_lb is NOT a NULL pointer" << endl;
+  // cout << endl;
+  // ********************************************************************************************
+  cout << endl;
+  cout << "test classical/Kaucher interval" << endl;
+  interval* test_interval_a;
+  interval* test_interval_b;
+  test_interval_a = new interval(3,2);
+  test_interval_b = new interval(0,1);
+  cout << "test_interval_a = " << *test_interval_a << endl;
+  cout << "test_interval_b = " << *test_interval_b << endl;
+  cout << "test_interval_ (a-b) = " << *test_interval_a - *test_interval_b << endl;
+  cout << "test_interval_ (a*b) = " << (*test_interval_a)*(*test_interval_b) << endl;
+  delete test_interval_a;
+  delete test_interval_b;
+  cout << "delete interval... and access memory after deleted..." << endl;
+  cout << "test_interval_a = " << *test_interval_a << endl;
+  cout << "test_interval_b = " << *test_interval_b << endl;
+  cout << endl;
+  // cout << "compare to double vector" << endl;
+  // double *test_double_vector;
+  // test_double_vector = new double[10];
+  // for (int i = 0; i < 10; i++) {
+  //   test_double_vector[i] = 2*i; 
+  //   cout << "test_double_vector[" << i << "] = " << test_double_vector[i] << endl;
+  // }
+  // delete test_double_vector;
+  // // cout << "length of test_double_vector after delete " << sizeof(test_double_vector) / sizeof(test_double_vector[0]) << endl;
+  // // for (int i = 0; i < 1; i++) cout << test_double_vector[i] << endl;
+  // cout << endl;
+  // ********************************************************************************************
+  // test construct/destruct ivector
+  cout << endl;
+  // ivector x_ivector_ptr(7);
+  ivector* x_ivector;
+  x_ivector = new ivector[7];
+  cout << "length of x_ivector (after defined) = " << VecLen(*x_ivector) << endl;
+  for (int i = 0; i < 7; i++) {
+    Resize(x_ivector[i],1);
+    x_ivector[i] = interval(3*i,-2*i);
+    // x_ivector[i] = 2*i;
+    // cout << "finished assignment" << endl;
+    cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+    // if (x_ivector[i]==NULL) {
+    //   cout << "NULL @ [" << i << "] component;" << endl;
+    //   cout << endl;
+    // }
+  }
+  cout << "length of x_ivector (after assignment) = " << VecLen(*x_ivector) << endl;
+  cout << "Lb(x_ivector) = " << Lb(*x_ivector) << endl;
+  cout << "Ub(x_ivector) = " << Ub(*x_ivector) << endl;
+
+  // for (int i = 0; i < 7; i++) {
+  //   cout << "lower bounds of x_ivector[" << i << "] = " << Lb(x_ivector)[i] << endl;
+  //   cout << "upper bounds of x_ivector[" << i << "] = " << Ub(x_ivector)[i] << endl;
+  // }
+
+  // delete [] x_ivector;
+  // cout << "finished deleting *ivector" << endl;
+  // for (int i = 0; i < 7; i++) {
+  //   cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+  // }
+  // cout << endl;
+
+  // cout << "rewrite after delete" << endl;
+  // x_ivector = new ivector[7];
+  // for (int i = 0; i < 7; i++) {
+  //   Resize(x_ivector[i],1);
+  //   x_ivector[i] = interval(4*i,-5*i);
+  //   cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+  // }
+  // // cout << "length of x_ivector = " << VecLen(*x_ivector) << endl;
+  // cout << "check before delete" << endl;
+  // for (int i = 0; i < 7; i++) {
+  //   cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+  // }
+  // delete [] x_ivector;
+  cout << endl;
+  // *********************************************************************************************
+  // cout << endl;
+  // interval* x_interval;
+  // x_interval = new interval[1];
+  // *x_interval = interval(3,-2);
+  // cout << "x_interval = " << *x_interval << endl;
+  // delete [] x_interval;
+  // cout << endl;
+  // // the same case but using ivector instead of interval
+  // cout << endl;
+  // ivector* y_ivector ;
+  // y_ivector = new ivector[1];
+  // Resize(y_ivector[0],1);
+  // y_ivector[0] = interval(3,-2);
+  // cout << "y_ivector = " << y_ivector[0] << endl;
+  // delete [] y_ivector;
+  // cout << endl;
+  // *********************************************************************************************
+  // test construct/destruct l_interval class
+  // RESULTS: NOT WORK - A LOT OF SAFE GUARDS
+  // cout << endl;
+  // l_interval x_l_interval;
+  // stagprec= 3;
+  // x_l_interval = l_interval(3,2);
+  // cout << "mid(x_l_interval) = " << mid(x_l_interval) << endl;
+  // cout << endl;
+  // *********************************************************************************************
+  // test born/death of a double vector
+  // cout << endl;
+  // double *test_vector;
+  // cout << "test born/death of a dynamic mem for vector" << endl;
+  // test_vector = new double[7];
+  // for (int i = 0; i < 7; i++) test_vector[i] = i;
+  // for (int i = 0; i < 7; i++) cout << "test_vector[" << i << "] = " << test_vector[i] << endl;
+  // cout << "done printing..." << endl;
+  // delete [] test_vector;
+  // cout << "done deleting..." << endl;
+  // // for (int i = 0; i < 7; i++) cout << "test_vector[" << i << "] = " << test_vector[i] << endl;
+  // int length_test_vector = sizeof(test_vector) / sizeof(test_vector[0]);
+  // cout << "test after deleted!" << endl;
+  // for (int i = 0; i < length_test_vector; i++) cout << "test_vector[" << i << "] = " << test_vector[i] << endl;
+  // cout << "is the vector deleted?" << endl;
+  // cout << "legnth of test_vector after deleted = " << length_test_vector << endl;
+  // cout << "YES!" << endl;
+  // cout << endl;
+  // *********************************************************************************************
+  // test destructing an interval
+  // RESULT: FUNCTION WORKS BUT THE INTERVAL STAYS THE SAME
+  // cout << endl;
+  // cout << "test destruct interval" << endl;
+  // interval test_destruct;
+  // test_destruct = interval(1,-1);
+  // cout << test_destruct.inf << endl;
+  // cout << "destruct interval" << endl;
+  // test_destruct.~interval();
+  // cout << "assessing test_destruct.inf after deleting: " << test_destruct.inf << endl;
+  // cout << endl;
+  // *********************************************************************************************
+  // test interval array
+  // int n = 4;
+  // imatrix A(n,n);
+  // cout << "test interval matrix" << endl;
+  // for (int i = 1; i < n+1; i++)
+  //   for (int j = 1; j < n+1; j++) {
+  //     A[i][j] = interval(j,i);
+  //     cout << "A[" << i << "][" << j << "] = " << A[i][j] << endl;
+  //   }
+
+  // cout << endl;
+  // cout << endl;
+
+  // cout << "test interval vector" << endl;
+
+  // ivector Z(n);
+  // for (int i = 1; i < n+1; i++) {
+  //   Z[i] = interval(i+0.5,i-0.75);
+  //   cout << "Z[" << i << "] = " << Z[i] << endl;
+  // }
+
+  // cout << endl;
+  // cout << endl;
+
+  // ivector AtimesZ;
+  // AtimesZ = A*Z;
+  // for (int i = 1; i < n+1; i++ )
+  //   cout << "AtimesZ[" << i << "] =" << AtimesZ[i] << endl;
+
+  // return 0;
+}

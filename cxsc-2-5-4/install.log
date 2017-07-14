@@ -1,0 +1,2189 @@
+[H[2J##
+##  CXSC is a C++ library for eXtended Scientific Computing
+##
+##  Copyright (C) 1990-2000 Institut fuer Angewandte Mathematik,
+##                          Universitaet Karlsruhe, Germany
+##            (C) 2000-2014 Wiss. Rechnen/Softwaretechnologie
+##                          Universitaet Wuppertal, Germany
+##
+##  This library is free software; you can redistribute it and/or
+##  modify it under the terms of the GNU Library General Public
+##  License as published by the Free Software Foundation; either
+##  version 2 of the License, or (at your option) any later version.
+##
+##  This library is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+##  Library General Public License for more details.
+##
+##  You should have received a copy of the GNU Library General Public
+##  License along with this library; if not, write to the Free
+##  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+##
+
+Type 'yes' to accept this license offer.
+Type 'no' to decline this license offer.
+
+Do you accept the terms of either license? [no] 
+---------------------------------------------------------------------------------
+
+checking host system type....x86_64
+checking build system type...Linux
+
+Configuring for a x86_64-linux-gnu host.
+
+Section: Compiler
+=================
+Possible values:    gnu    for the GNU C/C++ Compiler
+                    intel  for the INTEL C/C++ Compiler
+Which C++ compiler? [gnu] Would you like to select a special GNU C/C++ Compiler-Version? [no] Would you like to use compiler optimization options? [yes] Which optimization level (e.g. -O1, -O2, ...)? [-O3] 
+Using GNU V.4.8 Compiler
+Would you like to generate 32 or 64 Bit Code? [64] 
+
+Section: Rounding Operations
+============================
+Possible values: asm    for hardware support for IEEE 754 arithmetic implemented in Assembler
+                 hard   for hardware support for IEEE 754 arithmetic
+                 soft   for software emulations for directed rounded floating-point operations
+Which method? [asm] 
+cxscconf.h succesfully created
+
+
+Section: Prefix
+===============
+(un-)installation prefix
+e.g. /usr/local/cxsc or local home directory
+Prefix [/home/anhvt89/cxsc] 
+CXSC will be installed into /home/anhvt89/Documents/c++lib/cxsc-2-5-4
+
+
+Section: Makefile
+=================
+Creating "Makefile" in /home/anhvt89/Documents/c++lib/cxsc-2-5-4 ... Done
+
+
+Section: Makefile.example
+=========================
+Creating "Makefile.example" in /home/anhvt89/Documents/c++lib/cxsc-2-5-4/examples ... Done
+
+
+Section: Library
+================
+Do you want to create a dynamic or static library? [dynamic]/static/both 
+Create a dynamic and static library.
+
+
+Section: Automatic Code Generation
+==================================
+Proceed with automatic code generation? [yes]/no 
+
+Section: Build CXSC Library
+===========================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/rts'
+make[2]: Nothing to be done for `lib'.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/rts'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/fi_lib'
+make[2]: Nothing to be done for `lib'.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src/fi_lib'
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make[2]: `lib' is up to date.
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+g++ -O3 -fno-strict-aliasing -shared -Wl,-soname,libcxsc.so.2 -o libcxsc.so.2.5.4 rts/a_abs_.o rts/a_add_.o rts/a_band.o rts/a_bclr.o rts/a_beqv.o rts/a_bmsb.o rts/a_bnot.o rts/a_bons.o rts/a_bor_.o rts/a_brtt.o rts/a_bset.o rts/a_bshf.o rts/a_btst.o rts/a_bxor.o rts/a_clck.o rts/a_div_.o rts/a_exit.o rts/a_free.o rts/a_gets.o rts/a_ival.o rts/a_ixch.o rts/a_lloc.o rts/a_mod_.o rts/a_mul_.o rts/a_nilc.o rts/a_popt.o rts/a_pptr.o rts/a_sets.o rts/a_sqr_.o rts/a_sub_.o rts/a_sval.o rts/a_syst.o rts/a_tick.o rts/a_time.o rts/a_umin.o rts/b_accu.o rts/b_acsh.o rts/b_acth.o rts/b_addc.o rts/b_addm.o rts/b_addu.o rts/b_adj.o rts/b_adpp.o rts/b_asgn.o rts/b_asin.o rts/b_asiv.o rts/b_asnh.o rts/b_atan.o rts/b_atav.o rts/b_atnh.o rts/b_baad.o rts/b_bacm.o rts/b_badd.o rts/b_badj.o rts/b_ball.o rts/b_banx.o rts/b_basu.o rts/b_bcad.o rts/b_bcat.o rts/b_bcdi.o rts/b_bcid.o rts/b_bclr.o rts/b_bcmp.o rts/b_bcpy.o rts/b_bcsu.o rts/b_bdiv.o rts/b_bdvn.o rts/b_bini.o rts/b_biv2.o rts/b_biv_.o rts/b_bivp.o rts/b_bldx.o rts/b_blgx.o rts/b_bmat.o rts/b_bmcm.o rts/b_bmdv.o rts/b_bms1.o rts/b_bms2.o rts/b_bmsh.o rts/b_bmsp.o rts/b_bmts.o rts/b_bmul.o rts/b_bmun.o rts/b_bnxt.o rts/b_bpnt.o rts/b_brnd.o rts/b_bshf.o rts/b_bsub.o rts/b_busp.o rts/b_chck.o rts/b_cmcp.o rts/b_comp.o rts/b_conf.o rts/b_coni.o rts/b_cos_.o rts/b_cosh.o rts/b_cot_.o rts/b_coth.o rts/b_cscn.o rts/b_deko.o rts/b_dtol.o rts/b_errr.o rts/b_exp_.o rts/b_expe.o rts/b_form.o rts/b_geta.o rts/b_gini.o rts/b_glbl.o rts/b_heap.o rts/b_ifrm.o rts/b_inv1.o rts/b_inv2.o rts/b_irnd.o rts/b_kapp.o rts/b_lnva.o rts/b_lnve.o rts/b_log_.o rts/b_loga.o rts/b_ltod.o rts/b_ltor.o rts/b_mdiv.o rts/b_muad.o rts/b_op88.o rts/b_out.o rts/b_outf.o rts/b_outi.o rts/b_outm.o rts/b_pi__.o rts/b_pign.o rts/b_pool.o rts/b_popt.o rts/b_pow_.o rts/b_prod.o rts/b_rnd.o rts/b_rndd.o rts/b_rndn.o rts/b_rndu.o rts/b_rtol.o rts/b_scan.o rts/b_shl1.o rts/b_shlu.o rts/b_shr1.o rts/b_shru.o rts/b_sico.o rts/b_sin_.o rts/b_sinh.o rts/b_snhv.o rts/b_sqrt.o rts/b_sqrv.o rts/b_subc.o rts/b_subm.o rts/b_subu.o rts/b_tadd.o rts/b_tadj.o rts/b_tan_.o rts/b_tanh.o rts/b_tcom.o rts/b_tdek.o rts/b_tdiv.o rts/b_test.o rts/b_text.o rts/b_tmdv.o rts/b_tmpf.o rts/b_tmul.o rts/b_trnd.o rts/b_tsub.o rts/c_cadd.o rts/c_csub.o rts/c_dadd.o rts/c_dsta.o rts/c_dsub.o rts/c_padd.o rts/c_psub.o rts/c_rcad.o rts/c_rcsb.o rts/c_scps.o rts/c_scpy.o rts/c_stad.o rts/c_stan.o rts/c_stau.o rts/d_ass.o rts/d_assc.o rts/d_assi.o rts/d_assz.o rts/d_chs.o rts/d_clr.o rts/d_dadd.o rts/d_dsub.o rts/d_eq.o rts/d_free.o rts/d_ge.o rts/d_gt.o rts/d_init.o rts/d_le.o rts/d_lt.o rts/d_ne.o rts/d_padd.o rts/d_psub.o rts/d_radd.o rts/d_rsub.o rts/d_sign.o rts/d_stad.o rts/d_stan.o rts/d_stau.o rts/d_temp.o rts/d_utmp.o rts/d_vlcp.o rts/e_actn.o rts/e_back.o rts/e_bmsg.o rts/e_data.o rts/e_ieee.o rts/e_ienv.o rts/e_popp.o rts/e_push.o rts/e_tmrt.o rts/e_tmsg.o rts/e_tprt.o rts/e_trap.o rts/e_xall.o rts/e_xarg.o rts/e_xdbz.o rts/e_xine.o rts/e_xiob.o rts/e_xiop.o rts/e_xios.o rts/e_xnor.o rts/e_xofl.o rts/e_xset.o rts/e_xufl.o rts/f_args.o rts/f_assg.o rts/f_back.o rts/f_bhex.o rts/f_eofp.o rts/f_exst.o rts/f_flsh.o rts/f_free.o rts/f_get_.o rts/f_getc.o rts/f_op88.o rts/f_popt.o rts/f_put_.o rts/f_putc.o rts/f_quer.o rts/f_rdf1.o rts/f_rdh1.o rts/f_rdi1.o rts/f_rdl1.o rts/f_rdl2.o rts/f_rdln.o rts/f_rdr1.o rts/f_rdr2.o rts/f_rds1.o rts/f_rdv1.o rts/f_read.o rts/f_rhex.o rts/f_rint.o rts/f_rset.o rts/f_rstn.o rts/f_rwri.o rts/f_rwrn.o rts/f_sexs.o rts/f_srse.o rts/f_srwi.o rts/f_whex.o rts/f_wint.o rts/f_wrb1.o rts/f_wrb2.o rts/f_wrc1.o rts/f_wrc2.o rts/f_wrd1.o rts/f_wrf1.o rts/f_wrf2.o rts/f_wrf3.o rts/f_wrf4.o rts/f_wrh1.o rts/f_wrh2.o rts/f_wri1.o rts/f_wri2.o rts/f_wrid.o rts/f_writ.o rts/f_wrl1.o rts/f_wrl2.o rts/f_wrl3.o rts/f_wrl4.o rts/f_wrln.o rts/f_wrr1.o rts/f_wrr2.o rts/f_wrr3.o rts/f_wrr4.o rts/f_wrs1.o rts/f_wrs2.o rts/i_acos.o rts/i_acot.o rts/i_acsh.o rts/i_acth.o rts/i_asin.o rts/i_asnh.o rts/i_atan.o rts/i_atnh.o rts/i_cns2.o rts/i_cnst.o rts/i_cos.o rts/i_cosh.o rts/i_cot.o rts/i_coth.o rts/i_dadd.o rts/i_dsta.o rts/i_dsub.o rts/i_ep10.o rts/i_exp.o rts/i_exp2.o rts/i_iadd.o rts/i_ista.o rts/i_isub.o rts/i_lg10.o rts/i_log.o rts/i_log2.o rts/i_loga.o rts/i_padd.o rts/i_pow.o rts/i_psub.o rts/i_read.o rts/i_riad.o rts/i_risb.o rts/i_scps.o rts/i_scpy.o rts/i_sin.o rts/i_sinh.o rts/i_sqrt.o rts/i_tan.o rts/i_tanh.o rts/l_abs.o rts/l_acos.o rts/l_acot.o rts/l_acsh.o rts/l_acth.o rts/l_addc.o rts/l_addd.o rts/l_addu.o rts/l_asin.o rts/l_asnh.o rts/l_ass.o rts/l_atan.o rts/l_atn2.o rts/l_atnh.o rts/l_comp.o rts/l_conv.o rts/l_cos.o rts/l_cosh.o rts/l_cot.o rts/l_coth.o rts/l_divc.o rts/l_divd.o rts/l_divu.o rts/l_eq.o rts/l_exct.o rts/l_exp.o rts/l_expo.o rts/l_flot.o rts/l_free.o rts/l_ge.o rts/l_gt.o rts/l_init.o rts/l_le.o rts/l_log.o rts/l_loga.o rts/l_lt.o rts/l_mant.o rts/l_mlen.o rts/l_mulc.o rts/l_muld.o rts/l_mulu.o rts/l_ne.o rts/l_pow.o rts/l_prec.o rts/l_pred.o rts/l_read.o rts/l_rond.o rts/l_rprc.o rts/l_rval.o rts/l_sign.o rts/l_sin.o rts/l_sinh.o rts/l_sqrt.o rts/l_subc.o rts/l_subd.o rts/l_subu.o rts/l_succ.o rts/l_tan.o rts/l_tanh.o rts/l_temp.o rts/l_trun.o rts/l_ttmp.o rts/l_umin.o rts/l_utmp.o rts/l_vlcp.o rts/l_whex.o rts/l_writ.o rts/o_user.o rts/p_init.o rts/r_abs.o rts/r_acos.o rts/r_acot.o rts/r_acsh.o rts/r_acth.o rts/r_addd.o rts/r_addn.o rts/r_addu.o rts/r_asin.o rts/r_asnh.o rts/r_ass.o rts/r_atan.o rts/r_atn2.o rts/r_atnh.o rts/r_aval.o rts/r_ceil.o rts/r_clss.o rts/r_cnsd.o rts/r_cnst.o rts/r_cnsu.o rts/r_comp.o rts/r_conv.o rts/r_cos.o rts/r_cosh.o rts/r_cot.o rts/r_coth.o rts/r_divd.o rts/r_divn.o rts/r_divu.o rts/r_ep10.o rts/r_eq.o rts/r_exp.o rts/r_exp2.o rts/r_expo.o rts/r_fini.o rts/r_flor.o rts/r_flot.o rts/r_frac.o rts/r_ftrp.o rts/r_ge.o rts/r_gt.o rts/r_le.o rts/r_lg10.o rts/r_log.o rts/r_log2.o rts/r_loga.o rts/r_lt.o rts/r_mant.o rts/r_muld.o rts/r_muln.o rts/r_mulu.o rts/r_ne.o rts/r_outp.o rts/r_pcmp.o rts/r_pow.o rts/r_pred.o rts/r_rdcr.o rts/r_read.o rts/r_rond.o rts/r_rval.o rts/r_scps.o rts/r_scpy.o rts/r_sign.o rts/r_sin.o rts/r_sinh.o rts/r_sqr_.o rts/r_sqrt.o rts/r_subd.o rts/r_subn.o rts/r_subu.o rts/r_succ.o rts/r_sval.o rts/r_tan.o rts/r_tanh.o rts/r_trun.o rts/r_umin.o rts/r_valu.o rts/r_writ.o rts/s_aacc.o rts/s_aaeq.o rts/s_aage.o rts/s_aagt.o rts/s_aain.o rts/s_aale.o rts/s_aalt.o rts/s_aane.o rts/s_accc.o rts/s_aceq.o rts/s_acge.o rts/s_acgt.o rts/s_acle.o rts/s_aclt.o rts/s_acne.o rts/s_add.o rts/s_aimg.o rts/s_alen.o rts/s_asgn.o rts/s_cacc.o rts/s_caeq.o rts/s_cage.o rts/s_cagt.o rts/s_cain.o rts/s_cale.o rts/s_calt.o rts/s_cane.o rts/s_char.o rts/s_conc.o rts/s_cons.o rts/s_cpos.o rts/s_cseq.o rts/s_csge.o rts/s_csgt.o rts/s_csle.o rts/s_cslt.o rts/s_csne.o rts/s_date.o rts/s_eteq.o rts/s_etge.o rts/s_etgt.o rts/s_etin.o rts/s_etle.o rts/s_etlt.o rts/s_etne.o rts/s_free.o rts/s_genv.o rts/s_init.o rts/s_ins1.o rts/s_ins2.o rts/s_int_.o rts/s_inxc.o rts/s_ixch.o rts/s_ixcn.o rts/s_len_.o rts/s_mul.o rts/s_real.o rts/s_rhex.o rts/s_sceq.o rts/s_scge.o rts/s_scgt.o rts/s_scle.o rts/s_sclt.o rts/s_scne.o rts/s_slen.o rts/s_spos.o rts/s_sseq.o rts/s_ssge.o rts/s_ssgt.o rts/s_ssle.o rts/s_sslt.o rts/s_ssne.o rts/s_stat.o rts/s_sub.o rts/s_suba.o rts/s_subs.o rts/s_temp.o rts/s_utmp.o rts/s_vlcp.o rts/s_whex.o rts/s_zero.o rts/t_abse.o rts/t_acos.o rts/t_acot.o rts/t_acsh.o rts/t_acth.o rts/t_acvt.o rts/t_asin.o rts/t_asnh.o rts/t_asvt.o rts/t_atan.o rts/t_atn2.o rts/t_atnh.o rts/t_cha1.o rts/t_cha2.o rts/t_cher.o rts/t_chi1.o rts/t_chi2.o rts/t_chiv.o rts/t_chk1.o rts/t_chse.o rts/t_cmpe.o rts/t_cnst.o rts/t_conv.o rts/t_cos.o rts/t_cosh.o rts/t_cot.o rts/t_coth.o rts/t_cpye.o rts/t_ctoe.o rts/t_dadd.o rts/t_das_.o rts/t_dcmp.o rts/t_dcnv.o rts/t_dcpy.o rts/t_dcst.o rts/t_deml.o rts/t_dhi1.o rts/t_dhi2.o rts/t_dhl1.o rts/t_dhl2.o rts/t_dmsc.o rts/t_dmul.o rts/t_dnrm.o rts/t_dsub.o rts/t_ecst.o rts/t_ehi1.o rts/t_ehi2.o rts/t_ehl1.o rts/t_ehl2.o rts/t_etoa.o rts/t_etoi.o rts/t_ex10.o rts/t_exme.o rts/t_exp.o rts/t_exp2.o rts/t_glbl.o rts/t_gtrg.o rts/t_iaah.o rts/t_iabs.o rts/t_iabt.o rts/t_iacs.o rts/t_iact.o rts/t_ianh.o rts/t_iash.o rts/t_iasn.o rts/t_iath.o rts/t_iatn.o rts/t_ichs.o rts/t_icos.o rts/t_icot.o rts/t_icpe.o rts/t_icsh.o rts/t_icth.o rts/t_ie10.o rts/t_iex2.o rts/t_iexp.o rts/t_il10.o rts/t_ilg2.o rts/t_ilog.o rts/t_ipow.o rts/t_irnd.o rts/t_is_c.o rts/t_isin.o rts/t_isnh.o rts/t_isqt.o rts/t_itan.o rts/t_itnh.o rts/t_lg10.o rts/t_lnpe.o rts/t_log.o rts/t_log2.o rts/t_md2e.o rts/t_merr.o rts/t_mtyp.o rts/t_mupi.o rts/t_pow.o rts/t_rtrg.o rts/t_s2xm.o rts/t_s_ei.o rts/t_s_ln.o rts/t_s_lp.o rts/t_satn.o rts/t_scee.o rts/t_sico.o rts/t_sin.o rts/t_sinh.o rts/t_sinv.o rts/t_sle_.o rts/t_sqme.o rts/t_sqrt.o rts/t_sqt_.o rts/t_srnd.o rts/t_ssin.o rts/t_stan.o rts/t_tan.o rts/t_tanh.o rts/t_tnct.o rts/t_xtpe.o rts/t_xtre.o rts/y_alck.o rts/y_asgn.o rts/y_free.o rts/y_inid.o rts/y_init.o rts/y_inxn.o rts/y_ixch.o rts/y_ixcn.o rts/y_new.o rts/y_stat.o rts/y_suba.o rts/y_temp.o rts/y_utmp.o rts/y_vlcp.o rts/y_ynxn.o rts/y_yxch.o rts/y_yxcn.o rts/z_ciad.o rts/z_cisb.o rts/z_czad.o rts/z_czsb.o rts/z_dadd.o rts/z_dsta.o rts/z_dsub.o rts/z_izad.o rts/z_izsb.o rts/z_padd.o rts/z_psub.o rts/z_rzad.o rts/z_rzsb.o rts/z_scps.o rts/z_scpy.o rts/z_zadd.o rts/z_zsta.o rts/z_zsub.o ../CToolbox/Modules/rpoly.o ../CToolbox/Modules/rpeval.o ../CToolbox/Modules/ddf_ari.o ../CToolbox/Modules/xi_ari.o ../CToolbox/Modules/nlfzero.o ../CToolbox/Modules/expreval.o ../CToolbox/Modules/matinv.o ../CToolbox/Modules/linsys.o ../CToolbox/Modules/lst1_ari.o ../CToolbox/Modules/gop1.o ../CToolbox/Modules/grad_ari.o ../CToolbox/Modules/hess_ari.o ../CToolbox/Modules/nlinsys.o ../CToolbox/Modules/lst_ari.o ../CToolbox/Modules/gop.o ../CToolbox/Modules/rev_simp.o ../CToolbox/Modules/set_ari.o ../CToolbox/Modules/lop_ari.o ../CToolbox/Modules/lop.o ../CToolbox/Modules/ci_util.o ../CToolbox/Modules/cpoly.o ../CToolbox/Modules/cipoly.o ../CToolbox/Modules/cpzero.o ../CToolbox/Modules/fastlss.o dot.o idot.o cdot.o cidot.o real.o rmath.o interval.o imath.o l_real.o l_rmath.o l_complex.o l_cinterval.o l_cimath.o l_cmath.o ioflags.o dotio.o realio.o l_interval.o l_imath.o complex.o cinterval.o rvector.o cvector.o ivector.o civector.o srvector.o sivector.o scvector.o scivector.o rmatrix.o cmatrix.o imatrix.o cimatrix.o srmatrix.o simatrix.o scmatrix.o scimatrix.o l_rvector.o l_ivector.o l_rmatrix.o l_imatrix.o intvector.o intmatrix.o cimath.o except.o lx_real.o lx_interval.o lx_complex.o lx_cinterval.o lx_ivector.o lx_civector.o fi_lib/j_erf.o fi_lib/j_acos.o fi_lib/j_acsh.o fi_lib/j_acot.o fi_lib/j_acth.o fi_lib/j_asin.o fi_lib/j_asnh.o fi_lib/j_atan.o fi_lib/j_atnh.o fi_lib/j_cos.o fi_lib/j_cosh.o fi_lib/j_cot.o fi_lib/j_coth.o fi_lib/j_exp.o fi_lib/j_ex10.o fi_lib/j_exp2.o fi_lib/j_expm.o fi_lib/j_log.o fi_lib/j_lg10.o fi_lib/j_lg1p.o fi_lib/j_log2.o fi_lib/j_sin.o fi_lib/j_sinh.o fi_lib/j_sqr.o fi_lib/j_sqrt.o fi_lib/j_tan.o fi_lib/j_tanh.o fi_lib/q_erf.o  fi_lib/q_acos.o fi_lib/q_acsh.o fi_lib/q_acot.o fi_lib/q_acth.o fi_lib/q_asin.o fi_lib/q_asnh.o fi_lib/q_atan.o fi_lib/q_atnh.o fi_lib/q_atn1.o fi_lib/q_cos.o fi_lib/q_cos1.o fi_lib/q_cosh.o fi_lib/q_cot.o fi_lib/q_coth.o fi_lib/q_ep1.o fi_lib/q_epm1.o fi_lib/q_exp.o fi_lib/q_ex10.o fi_lib/q_exp2.o fi_lib/q_expm.o fi_lib/q_log.o fi_lib/q_glbl.o fi_lib/q_log1.o fi_lib/q_lg10.o fi_lib/q_log2.o fi_lib/q_pred.o fi_lib/q_rtrg.o fi_lib/q_sin.o fi_lib/q_sin1.o fi_lib/q_sinh.o fi_lib/q_sqr.o fi_lib/q_sqrt.o fi_lib/q_succ.o fi_lib/q_tan.o fi_lib/q_tanh.o fi_lib/q_cth1.o fi_lib/q_scan.o fi_lib/q_prnt.o fi_lib/q_ari.o fi_lib/q_errm.o fi_lib/q_comp.o fi_lib/fi_lib_funcs.o 
+/usr/bin/ld: i386 architecture of input file `rts/a_abs_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_add_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_band.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bclr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_beqv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bmsb.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bnot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bons.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bor_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_brtt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bset.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bshf.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_btst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_bxor.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_clck.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_div_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_exit.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_free.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_gets.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_ival.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_ixch.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_lloc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_mod_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_mul_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_nilc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_popt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_pptr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_sets.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_sqr_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_sub_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_sval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_syst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_tick.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_time.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/a_umin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_accu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_acsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_acth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_addc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_addm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_addu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_adj.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_adpp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_asgn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_asin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_asiv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_asnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_atan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_atav.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_atnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_baad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bacm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_badd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_badj.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_ball.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_banx.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_basu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bcad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bcat.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bcdi.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bcid.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bclr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bcmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bcpy.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bcsu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bdiv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bdvn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bini.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_biv2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_biv_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bivp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bldx.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_blgx.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmat.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmcm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmdv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bms1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bms2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmsp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmts.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmul.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bmun.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bnxt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bpnt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_brnd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bshf.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_bsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_busp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_chck.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_cmcp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_comp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_conf.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_coni.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_cos_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_cosh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_cot_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_coth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_cscn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_deko.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_dtol.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_errr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_exp_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_expe.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_form.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_geta.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_gini.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_glbl.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_heap.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_ifrm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_inv1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_inv2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_irnd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_kapp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_lnva.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_lnve.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_log_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_loga.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_ltod.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_ltor.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_mdiv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_muad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_op88.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_out.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_outf.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_outi.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_outm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_pi__.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_pign.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_pool.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_popt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_pow_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_prod.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_rnd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_rndd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_rndn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_rndu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_rtol.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_scan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_shl1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_shlu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_shr1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_shru.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_sico.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_sin_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_sinh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_snhv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_sqrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_sqrv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_subc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_subm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_subu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tadj.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tan_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tanh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tcom.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tdek.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tdiv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_test.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_text.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tmdv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tmpf.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tmul.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_trnd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/b_tsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_cadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_csub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_dadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_dsta.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_dsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_padd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_psub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_rcad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_rcsb.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_scps.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_scpy.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_stad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_stan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/c_stau.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_ass.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_assc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_assi.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_assz.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_chs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_clr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_dadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_dsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_eq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_free.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_ge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_gt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_init.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_le.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_lt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_ne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_padd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_psub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_radd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_rsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_sign.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_stad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_stan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_stau.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_temp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_utmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/d_vlcp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_actn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_back.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_bmsg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_data.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_ieee.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_ienv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_popp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_push.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_tmrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_tmsg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_tprt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_trap.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xall.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xarg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xdbz.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xine.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xiob.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xiop.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xios.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xnor.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xofl.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xset.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/e_xufl.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_args.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_assg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_back.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_bhex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_eofp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_exst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_flsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_free.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_get_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_getc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_op88.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_popt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_put_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_putc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_quer.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdf1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdh1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdi1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdl1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdl2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdln.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdr1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdr2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rds1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rdv1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_read.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rhex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rint.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rset.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rstn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rwri.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_rwrn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_sexs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_srse.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_srwi.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_whex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wint.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrb1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrb2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrc1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrc2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrd1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrf1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrf2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrf3.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrf4.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrh1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrh2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wri1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wri2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrid.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_writ.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrl1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrl2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrl3.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrl4.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrln.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrr1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrr2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrr3.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrr4.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrs1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/f_wrs2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_acos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_acot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_acsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_acth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_asin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_asnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_atan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_atnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_cns2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_cnst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_cos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_cosh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_cot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_coth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_dadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_dsta.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_dsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_ep10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_exp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_exp2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_iadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_ista.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_isub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_lg10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_log.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_log2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_loga.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_padd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_pow.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_psub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_read.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_riad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_risb.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_scps.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_scpy.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_sin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_sinh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_sqrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_tan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/i_tanh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_abs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_acos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_acot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_acsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_acth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_addc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_addd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_addu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_asin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_asnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_ass.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_atan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_atn2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_atnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_comp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_conv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_cos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_cosh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_cot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_coth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_divc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_divd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_divu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_eq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_exct.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_exp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_expo.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_flot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_free.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_ge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_gt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_init.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_le.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_log.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_loga.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_lt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_mant.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_mlen.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_mulc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_muld.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_mulu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_ne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_pow.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_prec.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_pred.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_read.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_rond.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_rprc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_rval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_sign.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_sin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_sinh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_sqrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_subc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_subd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_subu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_succ.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_tan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_tanh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_temp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_trun.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_ttmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_umin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_utmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_vlcp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_whex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/l_writ.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/o_user.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/p_init.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_abs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_acos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_acot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_acsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_acth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_addd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_addn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_addu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_asin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_asnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_ass.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_atan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_atn2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_atnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_aval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_ceil.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_clss.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_cnsd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_cnst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_cnsu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_comp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_conv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_cos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_cosh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_cot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_coth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_divd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_divn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_divu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_ep10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_eq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_exp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_exp2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_expo.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_fini.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_flor.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_flot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_frac.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_ftrp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_ge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_gt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_le.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_lg10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_log.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_log2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_loga.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_lt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_mant.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_muld.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_muln.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_mulu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_ne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_outp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_pcmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_pow.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_pred.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_rdcr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_read.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_rond.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_rval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_scps.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_scpy.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_sign.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_sin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_sinh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_sqr_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_sqrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_subd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_subn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_subu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_succ.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_sval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_tan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_tanh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_trun.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_umin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_valu.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/r_writ.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aacc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aaeq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aage.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aagt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aain.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aale.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aalt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aane.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_accc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aceq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_acge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_acgt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_acle.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aclt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_acne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_add.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_aimg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_alen.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_asgn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cacc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_caeq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cage.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cagt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cain.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cale.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_calt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cane.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_char.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_conc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cons.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cpos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cseq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_csge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_csgt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_csle.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_cslt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_csne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_date.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_eteq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_etge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_etgt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_etin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_etle.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_etlt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_etne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_free.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_genv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_init.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ins1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ins2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_int_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_inxc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ixch.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ixcn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_len_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_mul.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_real.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_rhex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_sceq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_scge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_scgt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_scle.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_sclt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_scne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_slen.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_spos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_sseq.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ssge.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ssgt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ssle.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_sslt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_ssne.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_stat.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_sub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_suba.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_subs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_temp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_utmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_vlcp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_whex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/s_zero.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_abse.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_acos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_acot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_acsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_acth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_acvt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_asin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_asnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_asvt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_atan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_atn2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_atnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cha1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cha2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cher.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_chi1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_chi2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_chiv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_chk1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_chse.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cmpe.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cnst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_conv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cosh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_coth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_cpye.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ctoe.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_das_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dcmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dcnv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dcpy.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dcst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_deml.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dhi1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dhi2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dhl1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dhl2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dmsc.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dmul.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dnrm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_dsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ecst.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ehi1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ehi2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ehl1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ehl2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_etoa.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_etoi.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ex10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_exme.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_exp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_exp2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_glbl.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_gtrg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iaah.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iabs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iabt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iacs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iact.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ianh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iash.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iasn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iath.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iatn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ichs.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_icos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_icot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_icpe.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_icsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_icth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ie10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iex2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_iexp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_il10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ilg2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ilog.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ipow.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_irnd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_is_c.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_isin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_isnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_isqt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_itan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_itnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_lg10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_lnpe.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_log.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_log2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_md2e.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_merr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_mtyp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_mupi.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_pow.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_rtrg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_s2xm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_s_ei.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_s_ln.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_s_lp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_satn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_scee.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sico.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sinh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sinv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sle_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sqme.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sqrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_sqt_.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_srnd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_ssin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_stan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_tan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_tanh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_tnct.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_xtpe.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/t_xtre.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_alck.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_asgn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_free.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_inid.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_init.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_inxn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_ixch.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_ixcn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_new.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_stat.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_suba.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_temp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_utmp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_vlcp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_ynxn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_yxch.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/y_yxcn.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_ciad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_cisb.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_czad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_czsb.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_dadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_dsta.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_dsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_izad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_izsb.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_padd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_psub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_rzad.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_rzsb.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_scps.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_scpy.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_zadd.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_zsta.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `rts/z_zsub.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/rpoly.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/rpeval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/ddf_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/xi_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/nlfzero.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/expreval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/matinv.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/linsys.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/lst1_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/gop1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/grad_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/nlinsys.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/lst_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/gop.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/rev_simp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/set_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/lop_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/lop.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/ci_util.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/cpoly.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/cipoly.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/cpzero.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `../CToolbox/Modules/fastlss.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `l_complex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `l_cinterval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `l_cimath.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `l_cmath.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `ioflags.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `srvector.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `sivector.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `scvector.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `scivector.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `srmatrix.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `simatrix.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `scmatrix.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `scimatrix.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `l_rmatrix.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `cimath.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `except.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `lx_real.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `lx_interval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `lx_complex.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `lx_cinterval.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `lx_ivector.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `lx_civector.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_erf.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_acos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_acsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_acot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_acth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_asin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_asnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_atan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_atnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_cos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_cosh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_cot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_coth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_exp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_ex10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_exp2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_expm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_log.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_lg10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_lg1p.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_log2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_sin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_sinh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_sqr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_sqrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_tan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/j_tanh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_erf.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_acos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_acsh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_acot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_acth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_asin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_asnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_atan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_atnh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_atn1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_cos.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_cos1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_cosh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_cot.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_coth.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_ep1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_epm1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_exp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_ex10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_exp2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_expm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_log.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_glbl.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_log1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_lg10.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_log2.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_pred.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_rtrg.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_sin.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_sin1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_sinh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_sqr.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_sqrt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_succ.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_tan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_tanh.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_cth1.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_scan.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_prnt.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_ari.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_errm.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/q_comp.o' is incompatible with i386:x86-64 output
+/usr/bin/ld: i386 architecture of input file `fi_lib/fi_lib_funcs.o' is incompatible with i386:x86-64 output
+../CToolbox/Modules/rpoly.o: In function `RPolynomial::RPolynomial(int)':
+rpoly.cpp:(.text+0x6a): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/rpoly.o: In function `RPolynomial::RPolynomial(RPolynomial const&)':
+rpoly.cpp:(.text+0x1ab): undefined reference to `operator new[](unsigned int)'
+rpoly.cpp:(.text+0x252): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/rpoly.o: In function `operator>>(std::istream&, RPolynomial&)':
+rpoly.cpp:(.text+0x337): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+rpoly.cpp:(.text+0x373): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+rpoly.cpp:(.text+0x38e): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/rpoly.o: In function `operator<<(std::ostream&, RPolynomial)':
+rpoly.cpp:(.text+0x421): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+rpoly.cpp:(.text+0x44f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/rpoly.o:rpoly.cpp:(.text+0x4cd): more undefined references to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)' follow
+../CToolbox/Modules/rpeval.o: In function `RPolyEval(RPolynomial, cxsc::real, cxsc::real&, cxsc::interval&, int&, int&)':
+rpeval.cpp:(.text+0x136): undefined reference to `operator new[](unsigned int)'
+rpeval.cpp:(.text+0x16a): undefined reference to `operator new[](unsigned int)'
+rpeval.cpp:(.text+0x18e): undefined reference to `operator new[](unsigned int)'
+rpeval.cpp:(.text+0x1bd): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/rpeval.o: In function `void cxsc::cxscthrow<cxsc::ERROR_INTERVAL_EMPTY_INTERVAL>(cxsc::ERROR_INTERVAL_EMPTY_INTERVAL)':
+rpeval.cpp:(.text._ZN4cxsc9cxscthrowINS_29ERROR_INTERVAL_EMPTY_INTERVALEEEvT_[_ZN4cxsc9cxscthrowINS_29ERROR_INTERVAL_EMPTY_INTERVALEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/ddf_ari.o: In function `operator*(cxsc::interval const&, DerivType const&)':
+ddf_ari.cpp:(.text+0x2f7): undefined reference to `___tls_get_addr'
+../CToolbox/Modules/ddf_ari.o: In function `operator*(DerivType const&, cxsc::interval const&)':
+ddf_ari.cpp:(.text+0x3d7): undefined reference to `___tls_get_addr'
+../CToolbox/Modules/ddf_ari.o: In function `fEval(DerivType (*)(DerivType const&), cxsc::interval, cxsc::interval&)':
+ddf_ari.cpp:(.text+0x598): undefined reference to `___tls_get_addr'
+../CToolbox/Modules/ddf_ari.o: In function `dfEval(DerivType (*)(DerivType const&), cxsc::interval, cxsc::interval&, cxsc::interval&)':
+ddf_ari.cpp:(.text+0x693): undefined reference to `___tls_get_addr'
+../CToolbox/Modules/ddf_ari.o: In function `operator-(DerivType const&, cxsc::interval const&)':
+ddf_ari.cpp:(.text+0x906): undefined reference to `___tls_get_addr'
+../CToolbox/Modules/ddf_ari.o:ddf_ari.cpp:(.text+0xba8): more undefined references to `___tls_get_addr' follow
+../CToolbox/Modules/ddf_ari.o: In function `void cxsc::cxscthrow<cxsc::DIV_BY_ZERO>(cxsc::DIV_BY_ZERO)':
+ddf_ari.cpp:(.text._ZN4cxsc9cxscthrowINS_11DIV_BY_ZEROEEEvT_[_ZN4cxsc9cxscthrowINS_11DIV_BY_ZEROEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/xi_ari.o: In function `operator&(cxsc::interval const&, xinterval const&)':
+xi_ari.cpp:(.text+0x28c): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/nlfzero.o: In function `XINewton(DerivType (*)(DerivType const&), cxsc::interval, cxsc::real, int, cxsc::ivector&, cxsc::intvector&, int&)':
+nlfzero.cpp:(.text+0x144): undefined reference to `operator new[](unsigned int)'
+nlfzero.cpp:(.text+0x286): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/nlfzero.o: In function `AllZeros(DerivType (*)(DerivType const&), cxsc::interval, cxsc::real, cxsc::ivector&, cxsc::intvector&, int&, int&, int)':
+nlfzero.cpp:(.text+0xa14): undefined reference to `operator new[](unsigned int)'
+nlfzero.cpp:(.text+0xb22): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/nlfzero.o:nlfzero.cpp:(.text+0xc94): more undefined references to `operator new[](unsigned int)' follow
+../CToolbox/Modules/expreval.o: In function `InitEntry(cxsc::real)':
+expreval.cpp:(.text+0x8be): undefined reference to `operator new(unsigned int)'
+../CToolbox/Modules/expreval.o: In function `StaggArray::StaggArray(StaggArray const&)':
+expreval.cpp:(.text+0xb29): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/matinv.o: In function `MatInv(cxsc::rmatrix, cxsc::rmatrix&, int&)':
+matinv.cpp:(.text+0x24f): undefined reference to `operator new[](unsigned int)'
+matinv.cpp:(.text+0x404): undefined reference to `operator new[](unsigned int)'
+matinv.cpp:(.text+0x422): undefined reference to `operator new[](unsigned int)'
+matinv.cpp:(.text+0x44f): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/matinv.o:matinv.cpp:(.text+0x793): more undefined references to `operator new[](unsigned int)' follow
+../CToolbox/Modules/lst1_ari.o: In function `operator+(Pair1Elmt*, Pair1)':
+lst1_ari.cpp:(.text+0x3aa): undefined reference to `operator new(unsigned int)'
+lst1_ari.cpp:(.text+0x3cc): undefined reference to `operator new(unsigned int)'
+lst1_ari.cpp:(.text+0x3f0): undefined reference to `operator new(unsigned int)'
+../CToolbox/Modules/lst1_ari.o: In function `ListToVector(Pair1Elmt*, cxsc::ivector&, cxsc::intvector&)':
+lst1_ari.cpp:(.text+0x5ad): undefined reference to `operator new[](unsigned int)'
+lst1_ari.cpp:(.text+0x621): undefined reference to `operator new[](unsigned int)'
+lst1_ari.cpp:(.text+0x6a9): undefined reference to `operator new[](unsigned int)'
+lst1_ari.cpp:(.text+0x762): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/gop1.o: In function `GlobalOptimize(DerivType (*)(DerivType const&), cxsc::interval, cxsc::real, Pair1Elmt*&, int&, cxsc::interval&)':
+gop1.cpp:(.text+0x11c): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/gop1.o:gop1.cpp:(.text+0x13c): more undefined references to `operator new[](unsigned int)' follow
+../CToolbox/Modules/lst_ari.o: In function `operator+(PairElmt*, Pair const&)':
+lst_ari.cpp:(.text+0x921): undefined reference to `operator new(unsigned int)'
+lst_ari.cpp:(.text+0x9a1): undefined reference to `operator new(unsigned int)'
+lst_ari.cpp:(.text+0x9dd): undefined reference to `operator new(unsigned int)'
+../CToolbox/Modules/lst_ari.o: In function `ListToMatrix(PairElmt*, cxsc::imatrix&, cxsc::intvector&)':
+lst_ari.cpp:(.text+0xbe6): undefined reference to `operator new[](unsigned int)'
+lst_ari.cpp:(.text+0xd35): undefined reference to `operator new[](unsigned int)'
+lst_ari.cpp:(.text+0xdea): undefined reference to `operator new[](unsigned int)'
+lst_ari.cpp:(.text+0xe82): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/gop.o: In function `NewtonStep(HessType (*)(HTvector const&), cxsc::ivector, cxsc::imatrix&, cxsc::imatrix&, int&)':
+gop.cpp:(.text+0x1e4): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/gop.o:gop.cpp:(.text+0x21b): more undefined references to `operator new[](unsigned int)' follow
+../CToolbox/Modules/lop_ari.o: In function `insert(BaseListElement*&, IndexSet const&)':
+lop_ari.cpp:(.text+0x376): undefined reference to `operator new(unsigned int)'
+../CToolbox/Modules/lop.o: In function `ComputeTableau(cxsc::rmatrix, cxsc::rvector, cxsc::rvector, IndexSet, IndexSet, cxsc::imatrix&, int&)':
+lop.cpp:(.text+0x3ee): undefined reference to `operator new[](unsigned int)'
+lop.cpp:(.text+0x448): undefined reference to `operator new[](unsigned int)'
+lop.cpp:(.text+0x485): undefined reference to `operator new[](unsigned int)'
+lop.cpp:(.text+0x4ac): undefined reference to `operator new[](unsigned int)'
+lop.cpp:(.text+0x4e9): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/lop.o:lop.cpp:(.text+0x526): more undefined references to `operator new[](unsigned int)' follow
+../CToolbox/Modules/cpoly.o: In function `operator>>(std::istream&, CPolynomial&)':
+cpoly.cpp:(.text+0x387): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+cpoly.cpp:(.text+0x3c3): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+cpoly.cpp:(.text+0x3de): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/cpoly.o: In function `operator<<(std::ostream&, CPolynomial)':
+cpoly.cpp:(.text+0x471): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+cpoly.cpp:(.text+0x49f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/cpoly.o:cpoly.cpp:(.text+0x528): more undefined references to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)' follow
+../CToolbox/Modules/cipoly.o: In function `CIPolynomial::CIPolynomial(int)':
+cipoly.cpp:(.text+0x68): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/cipoly.o: In function `CIPolynomial::CIPolynomial(CIPolynomial const&)':
+cipoly.cpp:(.text+0x1f9): undefined reference to `operator new[](unsigned int)'
+cipoly.cpp:(.text+0x2ca): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/cipoly.o: In function `operator>>(std::istream&, CIPolynomial&)':
+cipoly.cpp:(.text+0x527): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+cipoly.cpp:(.text+0x563): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+cipoly.cpp:(.text+0x57e): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/cipoly.o: In function `operator<<(std::ostream&, CIPolynomial)':
+cipoly.cpp:(.text+0x657): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+cipoly.cpp:(.text+0x685): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/cipoly.o:cipoly.cpp:(.text+0x701): more undefined references to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)' follow
+../CToolbox/Modules/cpzero.o: In function `IntervalIteration(CPolynomial, CPolynomial, cxsc::complex, CIPolynomial&, cxsc::cinterval&, int&)':
+cpzero.cpp:(.text+0x11ae): undefined reference to `operator new[](unsigned int)'
+cpzero.cpp:(.text+0x12b8): undefined reference to `operator new[](unsigned int)'
+../CToolbox/Modules/cpzero.o: In function `void cxsc::cxscthrow<cxsc::ERROR_CINTERVAL_EMPTY_INTERVAL>(cxsc::ERROR_CINTERVAL_EMPTY_INTERVAL)':
+cpzero.cpp:(.text._ZN4cxsc9cxscthrowINS_30ERROR_CINTERVAL_EMPTY_INTERVALEEEvT_[_ZN4cxsc9cxscthrowINS_30ERROR_CINTERVAL_EMPTY_INTERVALEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+../CToolbox/Modules/cpzero.o: In function `cxsc::civector& cxsc::_vvassign<cxsc::civector, cxsc::civector, cxsc::cinterval>(cxsc::civector&, cxsc::civector const&)':
+cpzero.cpp:(.text._ZN4cxsc9_vvassignINS_8civectorES1_NS_9cintervalEEERT_S4_RKT0_[_ZN4cxsc9_vvassignINS_8civectorES1_NS_9cintervalEEERT_S4_RKT0_]+0x32): undefined reference to `operator new[](unsigned int)'
+l_complex.o: In function `cxsc::product(cxsc::l_real const&, cxsc::l_real const&, cxsc::l_real const&, cxsc::l_real const&, int&, cxsc::l_interval&)':
+l_complex.cpp:(.text+0x1440): undefined reference to `operator new[](unsigned int)'
+l_complex.cpp:(.text+0x14f7): undefined reference to `operator new[](unsigned int)'
+l_complex.cpp:(.text+0x15a7): undefined reference to `operator new[](unsigned int)'
+l_complex.cpp:(.text+0x1651): undefined reference to `operator new[](unsigned int)'
+l_complex.o:l_complex.cpp:(.text+0x16eb): more undefined references to `operator new[](unsigned int)' follow
+l_cinterval.o: In function `cxsc::operator<<(std::ostream&, cxsc::l_cinterval const&)':
+l_cinterval.cpp:(.text+0x8317): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+l_cinterval.cpp:(.text+0x8333): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+l_cinterval.cpp:(.text+0x8351): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+l_cinterval.o: In function `cxsc::operator<<(std::string&, cxsc::l_cinterval const&)':
+l_cinterval.cpp:(.text+0x83c6): undefined reference to `std::string::reserve(unsigned int)'
+l_cinterval.cpp:(.text+0x8417): undefined reference to `std::string::reserve(unsigned int)'
+l_cinterval.cpp:(.text+0x8462): undefined reference to `std::string::reserve(unsigned int)'
+l_cinterval.o: In function `cxsc::operator/(cxsc::l_cinterval const&, cxsc::l_cinterval const&)':
+l_cinterval.cpp:(.text+0x853a): undefined reference to `operator new[](unsigned int)'
+l_cinterval.cpp:(.text+0x879b): undefined reference to `operator new[](unsigned int)'
+l_cinterval.cpp:(.text+0x886f): undefined reference to `operator new[](unsigned int)'
+l_cinterval.cpp:(.text+0x88c4): undefined reference to `operator new[](unsigned int)'
+l_cinterval.o: In function `cxsc::operator>>(std::string&, cxsc::l_cinterval&)':
+l_cinterval.cpp:(.text+0x90cf): undefined reference to `operator new[](unsigned int)'
+l_cinterval.o:l_cinterval.cpp:(.text+0x90f6): more undefined references to `operator new[](unsigned int)' follow
+l_cinterval.o: In function `cxsc::operator>>(std::string&, cxsc::l_cinterval&)':
+l_cinterval.cpp:(.text+0x9d22): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+l_cinterval.cpp:(.text+0x9d4a): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+l_cinterval.o: In function `cxsc::operator>>(std::istream&, cxsc::l_cinterval&)':
+l_cinterval.cpp:(.text+0xa849): undefined reference to `operator new[](unsigned int)'
+l_cinterval.cpp:(.text+0xa870): undefined reference to `operator new[](unsigned int)'
+l_cinterval.cpp:(.text+0xae28): undefined reference to `operator new[](unsigned int)'
+l_cinterval.cpp:(.text+0xae7a): undefined reference to `operator new[](unsigned int)'
+l_cinterval.o: In function `cxsc::l_interval::l_interval(cxsc::real const&)':
+l_cinterval.cpp:(.text._ZN4cxsc10l_intervalC2ERKNS_4realE[_ZN4cxsc10l_intervalC5ERKNS_4realE]+0x23): undefined reference to `operator new[](unsigned int)'
+l_cinterval.o:l_cinterval.cpp:(.text._ZN4cxsc10l_intervalaSERKNS_4realE[_ZN4cxsc10l_intervalaSERKNS_4realE]+0x2f): more undefined references to `operator new[](unsigned int)' follow
+l_cinterval.o: In function `void cxsc::cxscthrow<cxsc::EMPTY_INTERVAL>(cxsc::EMPTY_INTERVAL)':
+l_cinterval.cpp:(.text._ZN4cxsc9cxscthrowINS_14EMPTY_INTERVALEEEvT_[_ZN4cxsc9cxscthrowINS_14EMPTY_INTERVALEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+l_cimath.o: In function `std::list<cxsc::l_cinterval, std::allocator<cxsc::l_cinterval> >::_M_insert(std::_List_iterator<cxsc::l_cinterval>, cxsc::l_cinterval const&) [clone .isra.29]':
+l_cimath.cpp:(.text+0x6c): undefined reference to `operator new(unsigned int)'
+l_cimath.cpp:(.text+0x92): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text+0xea): undefined reference to `operator new[](unsigned int)'
+l_cimath.o: In function `cxsc::exp(cxsc::l_cinterval const&)':
+l_cimath.cpp:(.text+0x39f): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text+0x3cc): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text+0x449): undefined reference to `operator new[](unsigned int)'
+l_cimath.o:l_cimath.cpp:(.text+0x4c3): more undefined references to `operator new[](unsigned int)' follow
+l_cimath.o: In function `cxsc::sqrt_all(cxsc::l_cinterval const&)':
+l_cimath.cpp:(.text+0x24419): undefined reference to `operator new(unsigned int)'
+l_cimath.cpp:(.text+0x244d1): undefined reference to `operator new(unsigned int)'
+l_cimath.o: In function `cxsc::sqrt_all(cxsc::l_cinterval const&, int)':
+l_cimath.cpp:(.text+0x25192): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text+0x251f7): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text+0x252d8): undefined reference to `operator new(unsigned int)'
+l_cimath.o: In function `cxsc::pow_all(cxsc::l_cinterval const&, cxsc::l_interval const&)':
+l_cimath.cpp:(.text+0x258f1): undefined reference to `operator new(unsigned int)'
+l_cimath.cpp:(.text+0x25a60): undefined reference to `operator new(unsigned int)'
+l_cimath.cpp:(.text+0x25bde): undefined reference to `operator new(unsigned int)'
+l_cimath.cpp:(.text+0x25d90): undefined reference to `operator new(unsigned int)'
+l_cimath.o:l_cimath.cpp:(.text+0x25e86): more undefined references to `operator new(unsigned int)' follow
+l_cimath.o: In function `cxsc::l_interval::_allo(int)':
+l_cimath.cpp:(.text._ZN4cxsc10l_interval5_alloEi[_ZN4cxsc10l_interval5_alloEi]+0x34): undefined reference to `operator new[](unsigned int)'
+l_cimath.o: In function `cxsc::l_interval::l_interval(cxsc::l_interval const&)':
+l_cimath.cpp:(.text._ZN4cxsc10l_intervalC2ERKS0_[_ZN4cxsc10l_intervalC5ERKS0_]+0x37): undefined reference to `operator new[](unsigned int)'
+l_cimath.o: In function `cxsc::operator+(cxsc::l_interval const&, cxsc::real const&)':
+l_cimath.cpp:(.text._ZN4cxscplERKNS_10l_intervalERKNS_4realE[_ZN4cxscplERKNS_10l_intervalERKNS_4realE]+0x36): undefined reference to `operator new[](unsigned int)'
+l_cimath.o: In function `cxsc::operator+(cxsc::real const&, cxsc::l_interval const&)':
+l_cimath.cpp:(.text._ZN4cxscplERKNS_4realERKNS_10l_intervalE[_ZN4cxscplERKNS_4realERKNS_10l_intervalE]+0x36): undefined reference to `operator new[](unsigned int)'
+l_cimath.o: In function `cxsc::operator-(cxsc::real const&, cxsc::l_interval const&)':
+l_cimath.cpp:(.text._ZN4cxscmiERKNS_4realERKNS_10l_intervalE[_ZN4cxscmiERKNS_4realERKNS_10l_intervalE]+0x36): undefined reference to `operator new[](unsigned int)'
+l_cimath.o:l_cimath.cpp:(.text._ZN4cxscmlERKNS_4realERKNS_10l_intervalE[_ZN4cxscmlERKNS_4realERKNS_10l_intervalE]+0x36): more undefined references to `operator new[](unsigned int)' follow
+l_cimath.o: In function `void cxsc::cxscthrow<cxsc::ERROR_LINTERVAL_EMPTY_INTERVAL>(cxsc::ERROR_LINTERVAL_EMPTY_INTERVAL)':
+l_cimath.cpp:(.text._ZN4cxsc9cxscthrowINS_30ERROR_LINTERVAL_EMPTY_INTERVALEEEvT_[_ZN4cxsc9cxscthrowINS_30ERROR_LINTERVAL_EMPTY_INTERVALEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+l_cimath.o: In function `cxsc::l_interval::l_interval(cxsc::real const&, cxsc::real const&)':
+l_cimath.cpp:(.text._ZN4cxsc10l_intervalC2ERKNS_4realES3_[_ZN4cxsc10l_intervalC5ERKNS_4realES3_]+0x3a): undefined reference to `operator new[](unsigned int)'
+l_cimath.o: In function `cxsc::l_cinterval::l_cinterval(cxsc::l_interval const&)':
+l_cimath.cpp:(.text._ZN4cxsc11l_cintervalC2ERKNS_10l_intervalE[_ZN4cxsc11l_cintervalC5ERKNS_10l_intervalE]+0x37): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text._ZN4cxsc11l_cintervalC2ERKNS_10l_intervalE[_ZN4cxsc11l_cintervalC5ERKNS_10l_intervalE]+0x74): undefined reference to `operator new[](unsigned int)'
+l_cimath.o: In function `cxsc::l_cinterval::l_cinterval(cxsc::real const&)':
+l_cimath.cpp:(.text._ZN4cxsc11l_cintervalC2ERKNS_4realE[_ZN4cxsc11l_cintervalC5ERKNS_4realE]+0x23): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text._ZN4cxsc11l_cintervalC2ERKNS_4realE[_ZN4cxsc11l_cintervalC5ERKNS_4realE]+0x4d): undefined reference to `operator new[](unsigned int)'
+l_cimath.o:l_cimath.cpp:(.text._ZN4cxscdvERKNS_4realERKNS_11l_cintervalE[_ZN4cxscdvERKNS_4realERKNS_11l_cintervalE]+0x36): more undefined references to `operator new[](unsigned int)' follow
+l_cimath.o: In function `std::list<cxsc::l_cinterval, std::allocator<cxsc::l_cinterval> >::list(std::list<cxsc::l_cinterval, std::allocator<cxsc::l_cinterval> > const&)':
+l_cimath.cpp:(.text._ZNSt4listIN4cxsc11l_cintervalESaIS1_EEC2ERKS3_[_ZNSt4listIN4cxsc11l_cintervalESaIS1_EEC5ERKS3_]+0x36): undefined reference to `operator new(unsigned int)'
+l_cimath.cpp:(.text._ZNSt4listIN4cxsc11l_cintervalESaIS1_EEC2ERKS3_[_ZNSt4listIN4cxsc11l_cintervalESaIS1_EEC5ERKS3_]+0x5d): undefined reference to `operator new[](unsigned int)'
+l_cimath.cpp:(.text._ZNSt4listIN4cxsc11l_cintervalESaIS1_EEC2ERKS3_[_ZNSt4listIN4cxsc11l_cintervalESaIS1_EEC5ERKS3_]+0xb2): undefined reference to `operator new[](unsigned int)'
+l_cmath.o: In function `cxsc::pow(cxsc::l_complex const&, cxsc::l_real const&)':
+l_cmath.cpp:(.text+0x4bf5): undefined reference to `operator new[](unsigned int)'
+l_cmath.o: In function `cxsc::power_fast(cxsc::l_complex const&, int)':
+l_cmath.cpp:(.text+0x529c): undefined reference to `operator new[](unsigned int)'
+l_cmath.cpp:(.text+0x53bb): undefined reference to `operator new[](unsigned int)'
+l_cmath.o:l_cmath.cpp:(.text+0x54cd): more undefined references to `operator new[](unsigned int)' follow
+l_cmath.o: In function `cxsc::sqrt_all(cxsc::l_complex const&)':
+l_cmath.cpp:(.text+0x5aed): undefined reference to `operator new(unsigned int)'
+l_cmath.cpp:(.text+0x5b2d): undefined reference to `operator new(unsigned int)'
+l_cmath.o: In function `cxsc::sqrt_all(cxsc::l_complex const&, int)':
+l_cmath.cpp:(.text+0x5c99): undefined reference to `operator new[](unsigned int)'
+l_cmath.cpp:(.text+0x5e96): undefined reference to `operator new[](unsigned int)'
+l_cmath.cpp:(.text+0x5f82): undefined reference to `operator new[](unsigned int)'
+l_cmath.cpp:(.text+0x6077): undefined reference to `operator new(unsigned int)'
+l_cmath.cpp:(.text+0x6136): undefined reference to `operator new(unsigned int)'
+l_cmath.cpp:(.text+0x6237): undefined reference to `operator new(unsigned int)'
+l_cmath.cpp:(.text+0x62a6): undefined reference to `operator new(unsigned int)'
+l_cmath.cpp:(.text+0x630a): undefined reference to `operator new(unsigned int)'
+l_cmath.o:l_cmath.cpp:(.text+0x6366): more undefined references to `operator new(unsigned int)' follow
+ioflags.o: In function `cxsc::skipwhitespaces(std::string)':
+ioflags.cpp:(.text+0xddd): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+ioflags.o: In function `cxsc::skipwhitespacessinglechar(std::string, char)':
+ioflags.cpp:(.text+0xf45): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+ioflags.o: In function `cxsc::skipleadingchars(std::string, char, char)':
+ioflags.cpp:(.text+0x1168): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+srvector.o: In function `cxsc::sparse_dot::sparse_dot(unsigned int)':
+srvector.cpp:(.text+0x9b): undefined reference to `operator new(unsigned int)'
+srvector.o: In function `cxsc::sparse_dot::sparse_dot(cxsc::sparse_dot const&)':
+srvector.cpp:(.text+0x24b): undefined reference to `operator new(unsigned int)'
+srvector.cpp:(.text+0x286): undefined reference to `operator new(unsigned int)'
+srvector.cpp:(.text+0x2a6): undefined reference to `operator new(unsigned int)'
+srvector.o: In function `std::vector<cxsc::real, std::allocator<cxsc::real> >::_M_insert_aux(__gnu_cxx::__normal_iterator<cxsc::real*, std::vector<cxsc::real, std::allocator<cxsc::real> > >, cxsc::real const&)':
+srvector.cpp:(.text._ZNSt6vectorIN4cxsc4realESaIS1_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS1_S3_EERKS1_[_ZNSt6vectorIN4cxsc4realESaIS1_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS1_S3_EERKS1_]+0xa4): undefined reference to `operator new(unsigned int)'
+sivector.o:sivector.cpp:(.text+0x90f): more undefined references to `operator new(unsigned int)' follow
+l_rmatrix.o: In function `cxsc::Id(cxsc::l_rmatrix const&)':
+l_rmatrix.cpp:(.text+0x79): undefined reference to `operator new[](unsigned int)'
+l_rmatrix.o: In function `cxsc::transp(cxsc::l_rmatrix const&)':
+l_rmatrix.cpp:(.text+0x1df): undefined reference to `operator new[](unsigned int)'
+l_rmatrix.o: In function `cxsc::DoubleSize(cxsc::l_rmatrix&)':
+l_rmatrix.cpp:(.text+0x375): undefined reference to `operator new[](unsigned int)'
+cimath.o: In function `std::list<cxsc::cinterval, std::allocator<cxsc::cinterval> >::_M_create_node(cxsc::cinterval const&) [clone .isra.34]':
+cimath.cpp:(.text+0x65): undefined reference to `operator new(unsigned int)'
+cimath.o: In function `cxsc::sqrt_all(cxsc::cinterval const&)':
+cimath.cpp:(.text+0xc467): undefined reference to `operator new(unsigned int)'
+cimath.cpp:(.text+0xc577): undefined reference to `operator new(unsigned int)'
+cimath.o: In function `cxsc::sqrt_all(cxsc::cinterval const&, int)':
+cimath.cpp:(.text+0x12e4d): undefined reference to `operator new(unsigned int)'
+cimath.o: In function `cxsc::pow_all(cxsc::cinterval const&, cxsc::interval const&)':
+cimath.cpp:(.text+0x13229): undefined reference to `operator new(unsigned int)'
+cimath.o:cimath.cpp:(.text+0x132ed): more undefined references to `operator new(unsigned int)' follow
+except.o: In function `cxsc::ERROR__TYPE_CAST_OF_THICK_OBJ<cxsc::imatrix_slice>::errtext() const':
+except.cpp:(.text+0x3c22): undefined reference to `std::string::append(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR_ALL::errtext() const':
+except.cpp:(.text+0x3dcd): undefined reference to `std::string::append(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR__OP_WITH_WRONG_DIM<cxsc::l_rmatrix_subv>::errtext() const':
+except.cpp:(.text+0x3e72): undefined reference to `std::string::append(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR__ROW_OR_COL_NOT_IN_MAT<cxsc::cmatrix_slice>::errtext() const':
+except.cpp:(.text+0x3f52): undefined reference to `std::string::append(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR_RVECTOR::errtext() const':
+except.cpp:(.text+0x4032): undefined reference to `std::string::append(char const*, unsigned int)'
+except.o:except.cpp:(.text+0x4112): more undefined references to `std::string::append(char const*, unsigned int)' follow
+except.o: In function `cxsc::ERROR_DOT::ERROR_DOT()':
+except.cpp:(.text+0x158d8): undefined reference to `std::string::assign(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR_DOT::ERROR_DOT()':
+except.cpp:(.text+0x15943): undefined reference to `std::string::assign(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR_REAL::ERROR_REAL()':
+except.cpp:(.text+0x15a98): undefined reference to `std::string::assign(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR_REAL::ERROR_REAL()':
+except.cpp:(.text+0x15b03): undefined reference to `std::string::assign(char const*, unsigned int)'
+except.o: In function `cxsc::ERROR_INTERVAL::ERROR_INTERVAL()':
+except.cpp:(.text+0x15c64): undefined reference to `std::string::assign(char const*, unsigned int)'
+except.o:except.cpp:(.text+0x15ce5): more undefined references to `std::string::assign(char const*, unsigned int)' follow
+lx_interval.o: In function `cxsc::times2powr(cxsc::l_real const&, cxsc::real const&)':
+lx_interval.cpp:(.text+0x8f): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::StrContains(std::string const&, char const&, char const&)':
+lx_interval.cpp:(.text+0x2a1): undefined reference to `std::string::find(char, unsigned int) const'
+lx_interval.cpp:(.text+0x2bb): undefined reference to `std::string::find(char, unsigned int) const'
+lx_interval.o: In function `cxsc::operator<<(std::string&, cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x4eb): undefined reference to `std::string::append(char const*, unsigned int)'
+lx_interval.cpp:(.text+0x57a): undefined reference to `std::string::append(char const*, unsigned int)'
+lx_interval.cpp:(.text+0x5ad): undefined reference to `std::string::reserve(unsigned int)'
+lx_interval.o: In function `cxsc::Str_Contains(std::string const&, char const&, char const&)':
+lx_interval.cpp:(.text+0xda1): undefined reference to `std::string::find(char, unsigned int) const'
+lx_interval.cpp:(.text+0xdbb): undefined reference to `std::string::find(char, unsigned int) const'
+lx_interval.o: In function `cxsc::wide_max()':
+lx_interval.cpp:(.text+0xfa1): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::wide_any(int)':
+lx_interval.cpp:(.text+0x11b0): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::One_m_lx_interval()':
+lx_interval.cpp:(.text+0xaa58): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::One_p_lx_interval()':
+lx_interval.cpp:(.text+0xacf8): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::sqrt(cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x11a6a): undefined reference to `operator new[](unsigned int)'
+lx_interval.o:lx_interval.cpp:(.text+0x18332): more undefined references to `operator new[](unsigned int)' follow
+lx_interval.o: In function `cxsc::lx_interval::lx_interval(cxsc::real const&, std::string const&)':
+lx_interval.cpp:(.text+0x1e4e7): undefined reference to `std::string::find_first_of(char const*, unsigned int, unsigned int) const'
+lx_interval.cpp:(.text+0x1e50f): undefined reference to `std::string::find_first_of(char const*, unsigned int, unsigned int) const'
+lx_interval.o: In function `cxsc::operator>>(std::string&, cxsc::lx_interval&)':
+lx_interval.cpp:(.text+0x1ef60): undefined reference to `std::string::find(char const*, unsigned int, unsigned int) const'
+lx_interval.cpp:(.text+0x1ef81): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+lx_interval.cpp:(.text+0x1efd5): undefined reference to `std::string::assign(char const*, unsigned int)'
+lx_interval.cpp:(.text+0x1f07e): undefined reference to `std::__throw_out_of_range_fmt(char const*, ...)'
+lx_interval.o: In function `cxsc::Bin2Dec(cxsc::lx_interval const&, cxsc::real&, cxsc::l_interval&)':
+lx_interval.cpp:(.text+0x1f77b): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::operator<<(std::ostream&, cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x2002d): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.cpp:(.text+0x2003f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.cpp:(.text+0x20096): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.cpp:(.text+0x200aa): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.cpp:(.text+0x200c7): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.o: In function `cxsc::operator>>(std::string&, cxsc::lx_real&)':
+lx_interval.cpp:(.text+0x20b80): undefined reference to `std::string::find(char const*, unsigned int, unsigned int) const'
+lx_interval.cpp:(.text+0x20ba1): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+lx_interval.cpp:(.text+0x20be3): undefined reference to `std::string::assign(char const*, unsigned int)'
+lx_interval.cpp:(.text+0x20c6d): undefined reference to `std::__throw_out_of_range_fmt(char const*, ...)'
+lx_interval.o: In function `cxsc::sin(cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x2258e): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::cos(cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x2370c): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::Expm1(cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x25b21): undefined reference to `operator new[](unsigned int)'
+lx_interval.cpp:(.text+0x25c17): undefined reference to `operator new[](unsigned int)'
+lx_interval.cpp:(.text+0x25e1b): undefined reference to `operator new[](unsigned int)'
+lx_interval.o:lx_interval.cpp:(.text+0x26a23): more undefined references to `operator new[](unsigned int)' follow
+lx_interval.o: In function `cxsc::Asinh_(cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x35154): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.o: In function `cxsc::Acoshp1_(cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x35a9f): undefined reference to `operator new[](unsigned int)'
+lx_interval.cpp:(.text+0x35bc1): undefined reference to `operator new[](unsigned int)'
+lx_interval.cpp:(.text+0x35d36): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::Atanh_(cxsc::lx_interval const&)':
+lx_interval.cpp:(.text+0x36085): undefined reference to `operator new[](unsigned int)'
+lx_interval.cpp:(.text+0x3611b): undefined reference to `operator new[](unsigned int)'
+lx_interval.o:lx_interval.cpp:(.text+0x3660c): more undefined references to `operator new[](unsigned int)' follow
+lx_interval.o: In function `void cxsc::cxscthrow<cxsc::REAL_NOT_ALLOWED>(cxsc::REAL_NOT_ALLOWED)':
+lx_interval.cpp:(.text._ZN4cxsc9cxscthrowINS_16REAL_NOT_ALLOWEDEEEvT_[_ZN4cxsc9cxscthrowINS_16REAL_NOT_ALLOWEDEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.o: In function `cxsc::lx_interval::lx_interval(cxsc::real const&, cxsc::l_interval const&)':
+lx_interval.cpp:(.text._ZN4cxsc11lx_intervalC2ERKNS_4realERKNS_10l_intervalE[_ZN4cxsc11lx_intervalC5ERKNS_4realERKNS_10l_intervalE]+0x4f): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `void cxsc::cxscthrow<cxsc::REAL_INT_OUT_OF_RANGE>(cxsc::REAL_INT_OUT_OF_RANGE)':
+lx_interval.cpp:(.text._ZN4cxsc9cxscthrowINS_21REAL_INT_OUT_OF_RANGEEEEvT_[_ZN4cxsc9cxscthrowINS_21REAL_INT_OUT_OF_RANGEEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.o: In function `cxsc::operator+(cxsc::real const&, cxsc::lx_interval const&)':
+lx_interval.cpp:(.text._ZN4cxscplERKNS_4realERKNS_11lx_intervalE[_ZN4cxscplERKNS_4realERKNS_11lx_intervalE]+0x3f): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::operator-(cxsc::real const&, cxsc::lx_interval const&)':
+lx_interval.cpp:(.text._ZN4cxscmiERKNS_4realERKNS_11lx_intervalE[_ZN4cxscmiERKNS_4realERKNS_11lx_intervalE]+0x75): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `void cxsc::cxscthrow<cxsc::NO_BRACKETS_IN_STRING>(cxsc::NO_BRACKETS_IN_STRING)':
+lx_interval.cpp:(.text._ZN4cxsc9cxscthrowINS_21NO_BRACKETS_IN_STRINGEEEvT_[_ZN4cxsc9cxscthrowINS_21NO_BRACKETS_IN_STRINGEEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.o: In function `void cxsc::cxscthrow<cxsc::OVERFLOW_ERROR>(cxsc::OVERFLOW_ERROR)':
+lx_interval.cpp:(.text._ZN4cxsc9cxscthrowINS_14OVERFLOW_ERROREEEvT_[_ZN4cxsc9cxscthrowINS_14OVERFLOW_ERROREEEvT_]+0x4f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_interval.o: In function `cxsc::operator/(cxsc::lx_interval const&, cxsc::real const&)':
+lx_interval.cpp:(.text._ZN4cxscdvERKNS_11lx_intervalERKNS_4realE[_ZN4cxscdvERKNS_11lx_intervalERKNS_4realE]+0x3f): undefined reference to `operator new[](unsigned int)'
+lx_interval.o: In function `cxsc::operator/(cxsc::real const&, cxsc::lx_interval const&)':
+lx_interval.cpp:(.text._ZN4cxscdvERKNS_4realERKNS_11lx_intervalE[_ZN4cxscdvERKNS_4realERKNS_11lx_intervalE]+0x3f): undefined reference to `operator new[](unsigned int)'
+lx_complex.o: In function `cxsc::operator>>(std::string&, cxsc::lx_complex&)':
+lx_complex.cpp:(.text+0x224): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x2d3): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x2e7): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x336): undefined reference to `std::string::find(char const*, unsigned int, unsigned int) const'
+lx_complex.cpp:(.text+0x352): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x3b9): undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&, unsigned int, unsigned int)'
+lx_complex.cpp:(.text+0x3f4): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x409): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x46c): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+lx_complex.cpp:(.text+0x4cf): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x4e3): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_complex.cpp:(.text+0x53f): undefined reference to `std::string::assign(char const*, unsigned int)'
+lx_complex.o: In function `cxsc::arg(cxsc::lx_complex const&)':
+lx_complex.cpp:(.text+0xc0c): undefined reference to `operator new[](unsigned int)'
+lx_complex.cpp:(.text+0xce3): undefined reference to `operator new[](unsigned int)'
+lx_complex.o: In function `cxsc::Arg(cxsc::lx_complex const&)':
+lx_complex.cpp:(.text+0x101c): undefined reference to `operator new[](unsigned int)'
+lx_complex.cpp:(.text+0x10f3): undefined reference to `operator new[](unsigned int)'
+lx_complex.o: In function `cxsc::pow(cxsc::lx_complex const&, cxsc::lx_real const&)':
+lx_complex.cpp:(.text+0x142a): undefined reference to `operator new[](unsigned int)'
+lx_complex.o:lx_complex.cpp:(.text+0x22bf): more undefined references to `operator new[](unsigned int)' follow
+lx_complex.o: In function `cxsc::sqrt_all(cxsc::lx_complex const&)':
+lx_complex.cpp:(.text+0xd68a): undefined reference to `operator new(unsigned int)'
+lx_complex.cpp:(.text+0xd897): undefined reference to `operator new(unsigned int)'
+lx_complex.o: In function `cxsc::sqrt_all(cxsc::lx_complex const&, int)':
+lx_complex.cpp:(.text+0xde46): undefined reference to `operator new(unsigned int)'
+lx_complex.cpp:(.text+0xdf2e): undefined reference to `operator new(unsigned int)'
+lx_complex.cpp:(.text+0xe078): undefined reference to `operator new(unsigned int)'
+lx_complex.o:lx_complex.cpp:(.text+0xe11e): more undefined references to `operator new(unsigned int)' follow
+lx_complex.o: In function `cxsc::lx_cinterval::lx_cinterval(cxsc::lx_complex const&)':
+lx_complex.cpp:(.text._ZN4cxsc12lx_cintervalC2ERKNS_10lx_complexE[_ZN4cxsc12lx_cintervalC5ERKNS_10lx_complexE]+0x7f): undefined reference to `operator new[](unsigned int)'
+lx_complex.cpp:(.text._ZN4cxsc12lx_cintervalC2ERKNS_10lx_complexE[_ZN4cxsc12lx_cintervalC5ERKNS_10lx_complexE]+0x161): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `std::list<cxsc::lx_cinterval, std::allocator<cxsc::lx_cinterval> >::_M_create_node(cxsc::lx_cinterval const&) [clone .isra.32]':
+lx_cinterval.cpp:(.text+0x69): undefined reference to `operator new(unsigned int)'
+lx_cinterval.cpp:(.text+0x99): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0xf4): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::cinterval::operator=(cxsc::lx_cinterval const&)':
+lx_cinterval.cpp:(.text+0x369): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0x396): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::operator>>(std::string&, cxsc::lx_cinterval&)':
+lx_cinterval.cpp:(.text+0x4b5): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0x53a): undefined reference to `std::string::find(char const*, unsigned int, unsigned int) const'
+lx_cinterval.cpp:(.text+0x55c): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+lx_cinterval.cpp:(.text+0x589): undefined reference to `std::string::find(char const*, unsigned int, unsigned int) const'
+lx_cinterval.cpp:(.text+0x5a4): undefined reference to `std::string::_M_mutate(unsigned int, unsigned int, unsigned int)'
+lx_cinterval.cpp:(.text+0x621): undefined reference to `std::string::assign(char const*, unsigned int)'
+lx_cinterval.cpp:(.text+0x7a2): undefined reference to `std::__throw_out_of_range_fmt(char const*, ...)'
+lx_cinterval.o: In function `cxsc::operator>>(std::istream&, cxsc::lx_cinterval&)':
+lx_cinterval.cpp:(.text+0xa89): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0xaa4): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_cinterval.cpp:(.text+0xafb): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+lx_cinterval.o: In function `cxsc::exp(cxsc::lx_cinterval const&)':
+lx_cinterval.cpp:(.text+0xe57): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0xe7e): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::exp2(cxsc::lx_cinterval const&)':
+lx_cinterval.cpp:(.text+0x11c4): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0x1224): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::exp10(cxsc::lx_cinterval const&)':
+lx_cinterval.cpp:(.text+0x1384): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o:lx_cinterval.cpp:(.text+0x13e4): more undefined references to `operator new[](unsigned int)' follow
+lx_cinterval.o: In function `cxsc::sqrt_all(cxsc::lx_cinterval const&)':
+lx_cinterval.cpp:(.text+0x29358): undefined reference to `operator new(unsigned int)'
+lx_cinterval.cpp:(.text+0x29480): undefined reference to `operator new(unsigned int)'
+lx_cinterval.o: In function `cxsc::sqrt_all(cxsc::lx_cinterval const&, int)':
+lx_cinterval.cpp:(.text+0x2a3f5): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0x2a4a9): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text+0x2a5aa): undefined reference to `operator new(unsigned int)'
+lx_cinterval.o: In function `cxsc::pow_all(cxsc::lx_cinterval const&, cxsc::lx_interval const&)':
+lx_cinterval.cpp:(.text+0x2ad70): undefined reference to `operator new(unsigned int)'
+lx_cinterval.cpp:(.text+0x2af01): undefined reference to `operator new(unsigned int)'
+lx_cinterval.cpp:(.text+0x2b0e2): undefined reference to `operator new(unsigned int)'
+lx_cinterval.cpp:(.text+0x2b2e4): undefined reference to `operator new(unsigned int)'
+lx_cinterval.o:lx_cinterval.cpp:(.text+0x2b6cb): more undefined references to `operator new(unsigned int)' follow
+lx_cinterval.o: In function `cxsc::operator+(cxsc::lx_interval const&, cxsc::real const&)':
+lx_cinterval.cpp:(.text._ZN4cxscplERKNS_11lx_intervalERKNS_4realE[_ZN4cxscplERKNS_11lx_intervalERKNS_4realE]+0x3f): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::operator-(cxsc::lx_interval const&, cxsc::real const&)':
+lx_cinterval.cpp:(.text._ZN4cxscmiERKNS_11lx_intervalERKNS_4realE[_ZN4cxscmiERKNS_11lx_intervalERKNS_4realE]+0x50): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::operator*(cxsc::real const&, cxsc::lx_interval const&)':
+lx_cinterval.cpp:(.text._ZN4cxscmlERKNS_4realERKNS_11lx_intervalE[_ZN4cxscmlERKNS_4realERKNS_11lx_intervalE]+0x3f): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::operator/(cxsc::lx_interval const&, cxsc::lx_real const&)':
+lx_cinterval.cpp:(.text._ZN4cxscdvERKNS_11lx_intervalERKNS_7lx_realE[_ZN4cxscdvERKNS_11lx_intervalERKNS_7lx_realE]+0x6b): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o: In function `cxsc::operator/(cxsc::lx_real const&, cxsc::lx_interval const&)':
+lx_cinterval.cpp:(.text._ZN4cxscdvERKNS_7lx_realERKNS_11lx_intervalE[_ZN4cxscdvERKNS_7lx_realERKNS_11lx_intervalE]+0x6b): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.o:lx_cinterval.cpp:(.text._ZN4cxsceqERKNS_11lx_intervalERKNS_4realE[_ZN4cxsceqERKNS_11lx_intervalERKNS_4realE]+0x2d): more undefined references to `operator new[](unsigned int)' follow
+lx_cinterval.o: In function `std::list<cxsc::lx_cinterval, std::allocator<cxsc::lx_cinterval> >::list(std::list<cxsc::lx_cinterval, std::allocator<cxsc::lx_cinterval> > const&)':
+lx_cinterval.cpp:(.text._ZNSt4listIN4cxsc12lx_cintervalESaIS1_EEC2ERKS3_[_ZNSt4listIN4cxsc12lx_cintervalESaIS1_EEC5ERKS3_]+0x36): undefined reference to `operator new(unsigned int)'
+lx_cinterval.cpp:(.text._ZNSt4listIN4cxsc12lx_cintervalESaIS1_EEC2ERKS3_[_ZNSt4listIN4cxsc12lx_cintervalESaIS1_EEC5ERKS3_]+0x67): undefined reference to `operator new[](unsigned int)'
+lx_cinterval.cpp:(.text._ZNSt4listIN4cxsc12lx_cintervalESaIS1_EEC2ERKS3_[_ZNSt4listIN4cxsc12lx_cintervalESaIS1_EEC5ERKS3_]+0xc4): undefined reference to `operator new[](unsigned int)'
+fi_lib/q_erf.o: In function `.L245':
+q_erf.cpp:(.text+0x18ae): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+fi_lib/q_errm.o: In function `fi_lib::q_abortnan(int, cxsc::real*, int)':
+q_errm.cpp:(.text+0x5b): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+q_errm.cpp:(.text+0x86): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+q_errm.cpp:(.text+0xd1): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+q_errm.cpp:(.text+0x1ce): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)'
+fi_lib/q_errm.o:q_errm.cpp:(.text+0x1ee): more undefined references to `std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)' follow
+/usr/bin/ld: rts/a_abs_.o: file class ELFCLASS32 incompatible with ELFCLASS64
+/usr/bin/ld: final link failed: File in wrong format
+collect2: error: ld returned 1 exit status
+make[1]: *** [libcxsc.so] Error 1
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+make: *** [libcxsc] Error 2
+
+Section: Install CXSC Library
+=============================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+d /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+make[1]: d: Command not found
+make[1]: [install_header] Error 127 (ignored)
+m 644 ./*.hpp ./*.inl ./*.h /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+/bin/sh: 1: m: not found
+make[1]: [install_header] Error 127 (ignored)
+m 644 rts/*.h /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+/bin/sh: 1: m: not found
+make[1]: [install_header] Error 127 (ignored)
+m 644 fi_lib/*.hpp /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+/bin/sh: 1: m: not found
+make[1]: [install_header] Error 127 (ignored)
+m 644 asm/r_ari.h /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+make[1]: m: Command not found
+make[1]: [install_header] Error 127 (ignored)
+m 644 ../cxscconf.h /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+make[1]: m: Command not found
+make[1]: [install_header] Error 127 (ignored)
+make[2]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+d /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+make[2]: d: Command not found
+make[2]: [install_header] Error 127 (ignored)
+m 644 Modules/*.hpp  /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+/bin/sh: 1: m: not found
+make[2]: [install_header] Error 127 (ignored)
+m 644 Modules/*.inl  /home/anhvt89/Documents/c++lib/cxsc-2-5-4/include
+/bin/sh: 1: m: not found
+make[2]: [install_header] Error 127 (ignored)
+make[2]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+d /home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib
+make[1]: d: Command not found
+make[1]: [install_header] Error 127 (ignored)
+rm -f /home/anhvt89/Documents/c++lib/cxsc-2-5-4/liblibcxsc*
+m 644 ./libcxsc.so.2.5.4 /home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib
+make[1]: m: Command not found
+make[1]: [install_dyn] Error 127 (ignored)
+ln -sf libcxsc.so.2.5.4 libcxsc.so.2
+ln -sf libcxsc.so.2 libcxsc.so
+cd /home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib; ln -sf libcxsc.so.2.5.4 libcxsc.so.2
+cd /home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib; ln -sf libcxsc.so.2 libcxsc.so
+m 644 ./libcxsc.a /home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib
+make[1]: m: Command not found
+make[1]: [install_static] Error 127 (ignored)
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/src'
+
+Section: Build CXSC Library Examples
+====================================
+cd examples; g++ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -I.. -I../src -I../src/rts -I../src/fi_lib -I../src/asm -L../src -o example example.cpp -lcxsc
+/usr/bin/ld: skipping incompatible ../src/libcxsc.a when searching for -lcxsc
+/usr/bin/ld: cannot find -lcxsc
+collect2: error: ld returned 1 exit status
+make: *** [example] Error 1
+
+Section: Build CXSC Toolbox Programs
+====================================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+g++ -o Programs/cpz_ex Programs/cpz_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/ddf_ex Programs/ddf_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/gop_ex Programs/gop_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/gop1_ex Programs/gop1_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/hess_ex Programs/hess_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/jac_ex Programs/jac_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/lop_ex Programs/lop_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/lss_ex Programs/lss_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/nlfz_ex Programs/nlfz_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/nlss_ex Programs/nlss_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/rpe_ex Programs/rpe_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/xev_ex1 Programs/xev_ex1.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/xev_ex2 Programs/xev_ex2.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/xev_ex3 Programs/xev_ex3.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -o Programs/fastlss_ex Programs/fastlss_ex.cpp -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+all toolbox sample programs are (now) up-to-date
+
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+
+Section: Install CToolbox
+=========================
+d /home/anhvt89/Documents/c++lib/cxsc-2-5-4/examples
+make: d: Command not found
+make: [install_examples] Error 127 (ignored)
+/bin/sh: 1: -m: not found
+make: *** [install_examples] Error 127
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+d /home/anhvt89/Documents/c++lib/cxsc-2-5-4/examples
+make[1]: d: Command not found
+make[1]: [installprog] Error 127 (ignored)
+/bin/sh: 1: -m: not found
+make[1]: *** [installprog] Error 127
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make: *** [installprog] Error 2
+
+Section: Test CToolbox
+============================
+make[1]: Entering directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+g++ -o test/tester -I/home/anhvt89/Documents/c++lib/cxsc-2-5-4/include -IModules -I../src -I../src/rts -I../src/fi_lib -I../src/asm -I../ -I./ -mfpmath=sse -msse2 -O3 -fno-strict-aliasing test/tester.cpp -Wl,-R/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/lib -lcxsc
+g++ -I../ -o test/sumup test/sumup.cpp 
+(Programs/cpz_ex < Programs/cpz_ex.in1) > test/cpz_ex.out1
+(Programs/cpz_ex < Programs/cpz_ex.in2) > test/cpz_ex.out2
+(Programs/gop1_ex < Programs/gop1_ex.in) > test/gop1_ex.out
+(Programs/gop_ex < Programs/gop_ex.in) > test/gop_ex.out
+(Programs/hess_ex < Programs/hess_ex.in) > test/hess_ex.out
+(Programs/jac_ex < Programs/jac_ex.in) > test/jac_ex.out
+(Programs/lop_ex < Programs/lop_ex.in1) > test/lop_ex.out1
+(Programs/lop_ex < Programs/lop_ex.in2) > test/lop_ex.out2
+(Programs/lss_ex < Programs/lss_ex.in1) > test/lss_ex.out1
+(Programs/lss_ex < Programs/lss_ex.in2) > test/lss_ex.out2
+(Programs/nlfz_ex < Programs/nlfz_ex.in) > test/nlfz_ex.out
+(Programs/nlss_ex < Programs/nlss_ex.in1) > test/nlss_ex.out1
+(Programs/nlss_ex < Programs/nlss_ex.in2) > test/nlss_ex.out2
+(Programs/rpe_ex < Programs/rpe_ex.in1) > test/rpe_ex.out1
+(Programs/rpe_ex < Programs/rpe_ex.in2) > test/rpe_ex.out2
+(Programs/xev_ex1 < Programs/xev_ex1.in) > test/xev_ex1.out
+(Programs/xev_ex2 < Programs/xev_ex2.in) > test/xev_ex2.out
+(Programs/xev_ex3 < Programs/xev_ex3.in) > test/xev_ex3.out
+rm -f test/ergebnis.dat
+touch test/ergebnis.dat
+cd test; ./tester cpz_ex.out1 cpz_ex.vgl1
+
+
+
+***********************************************************
+ checking program cpz_ex.out1
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 1.414213499999999E+000, 1.414213600000001E+000]
+[ 1.414213499999999E+000, 1.414213600000001E+000] equal
+[ 2.828427099999999E+000, 2.828427200000001E+000]
+[ 2.828427099999999E+000, 2.828427200000001E+000] equal
+[-4.242640700000001E+001,-4.242640599999999E+001]
+[-4.242640700000001E+001,-4.242640599999999E+001] equal
+[ 2.121320299999999E+001, 2.121320400000001E+001]
+[ 2.121320299999999E+001, 2.121320400000001E+001] equal
+[ 1.414213499999999E+000, 1.414213600000001E+000]
+[ 1.414213499999999E+000, 1.414213600000001E+000] equal
+[-3.384776400000001E+000,-3.384776299999999E+000]
+[-3.384776400000001E+000,-3.384776299999999E+000] equal
+[-3.585786500000001E+000,-3.585786399999999E+000]
+[-3.585786500000001E+000,-3.585786399999999E+000] equal
+[-1.715728800000001E-001,-1.715728699999999E-001]
+[-1.715728800000001E-001,-1.715728699999999E-001] equal
+[ 1.000000000000000E+000, 1.000000000000000E+000]
+[ 1.000000000000000E+000, 1.000000000000000E+000] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+
+Number of equalities                 :10
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester cpz_ex.out2 cpz_ex.vgl2
+
+
+
+***********************************************************
+ checking program cpz_ex.out2
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 4.999999899999999E+000, 5.000000100000001E+000]
+[ 4.999999899999999E+000, 5.000000100000001E+000] equal
+[-7.703719800000001E-033, 1.540744000000001E-033]
+[-7.703719800000001E-033, 1.540744000000001E-033] equal
+[ 2.399999899999999E+001, 2.400000100000001E+001]
+[ 2.399999899999999E+001, 2.400000100000001E+001] equal
+[-6.162975900000001E-033, 3.697785500000001E-032]
+[-6.162975900000001E-033, 3.697785500000001E-032] equal
+[-5.000000100000001E+001,-4.999999899999999E+001]
+[-5.000000100000001E+001,-4.999999899999999E+001] equal
+[-8.011868600000001E-032, 2.465190400000001E-032]
+[-8.011868600000001E-032, 2.465190400000001E-032] equal
+[ 3.499999899999999E+001, 3.500000100000001E+001]
+[ 3.499999899999999E+001, 3.500000100000001E+001] equal
+[-9.244463800000001E-033, 4.005934300000001E-032]
+[-9.244463800000001E-033, 4.005934300000001E-032] equal
+[-1.000000100000001E+001,-9.999999899999998E+000]
+[-1.000000100000001E+001,-9.999999899999998E+000] equal
+[-7.703719800000001E-033, 1.540744000000001E-033]
+[-7.703719800000001E-033, 1.540744000000001E-033] equal
+[ 1.000000000000000E+000, 1.000000000000000E+000]
+[ 1.000000000000000E+000, 1.000000000000000E+000] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+
+Number of equalities                 :12
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester gop1_ex.out gop1_ex.vgl
+
+
+
+***********************************************************
+ checking program gop1_ex.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[-6.795786600198826E-001,-6.795786600198804E-001]
+[-6.795786600198818E-001,-6.795786600198812E-001] superset
+[-8.242393984760781E-001,-8.242393984760754E-001]
+[-8.242393984760771E-001,-8.242393984760764E-001] superset
+[ 5.791794470920270E+000, 5.791794470920274E+000]
+[ 5.791794470920270E+000, 5.791794470920273E+000] superset
+[-6.774576143438904E+000,-6.774576143438899E+000]
+[-6.774576143438903E+000,-6.774576143438899E+000] superset
+[-4.913908362593149E-001,-4.913908362593142E-001]
+[-4.913908362593148E-001,-4.913908362593143E-001] superset
+[-1.203124944216723E+001,-1.203124944216711E+001]
+[-1.203124944216721E+001,-1.203124944216712E+001] superset
+
+Number of equalities                 :0
+Number of subsets to compare data    :0
+Number of supersets to compare data  :6
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester gop_ex.out gop_ex.vgl
+
+
+
+***********************************************************
+ checking program gop_ex.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 9.424777960768389E+000, 9.424777960770371E+000]
+[ 9.424777960768413E+000, 9.424777960770348E+000] superset
+[ 2.474999999999646E+000, 2.475000000000349E+000]
+[ 2.474999999999731E+000, 2.475000000000268E+000] superset
+[ 3.141592653589787E+000, 3.141592653589800E+000]
+[ 3.141592653589791E+000, 3.141592653589796E+000] superset
+[ 2.274999999999979E+000, 2.275000000000020E+000]
+[ 2.274999999999996E+000, 2.275000000000005E+000] superset
+[-3.141592653589810E+000,-3.141592653589777E+000]
+[-3.141592653589797E+000,-3.141592653589789E+000] superset
+[ 1.227499999999993E+001, 1.227500000000007E+001]
+[ 1.227499999999998E+001, 1.227500000000002E+001] superset
+[ 3.978873577297362E-001, 3.978873577297561E-001]
+[ 3.978873577297380E-001, 3.978873577297419E-001] superset
+[-1.306853009753610E+000,-1.306853009753534E+000]
+[-1.306853009753610E+000,-1.306853009753534E+000] equal
+[-1.424845041560702E+000,-1.424845041560660E+000]
+[-1.424845041560702E+000,-1.424845041560660E+000] equal
+[-1.761375780026132E+002,-1.761375780016278E+002]
+[-1.761375780026127E+002,-1.761375780016283E+002] superset
+
+Number of equalities                 :2
+Number of subsets to compare data    :0
+Number of supersets to compare data  :8
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester hess_ex.out hess_ex.vgl
+
+
+
+***********************************************************
+ checking program hess_ex.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 3.000000000000000E+000, 3.000000000000000E+000]
+[ 3.000000000000000E+000, 3.000000000000000E+000] equal
+[ 3.000000000000000E+000, 3.000000000000000E+000]
+[ 3.000000000000000E+000, 3.000000000000000E+000] equal
+[ 7.204000000000000E+003, 7.204000000000000E+003]
+[ 7.204000000000000E+003, 7.204000000000000E+003] equal
+[-1.200000000000000E+003,-1.200000000000000E+003]
+[-1.200000000000000E+003,-1.200000000000000E+003] equal
+[ 2.998334721065777E+000, 2.998334721065780E+000]
+[ 2.998334721065777E+000, 2.998334721065780E+000] equal
+[ 8.990008326394670E+000, 8.990008326394677E+000]
+[ 8.990008326394670E+000, 8.990008326394677E+000] equal
+[ 3.999995379607562E+000, 3.999995379616089E+000]
+[ 3.999995379607562E+000, 3.999995379616089E+000] equal
+[-5.546307857429157E-004,-5.546307843218299E-004]
+[-5.546307857429157E-004,-5.546307843218299E-004] equal
+[ 1.001107723574368E+000, 1.001107723582890E+000]
+[ 1.001107723574368E+000, 1.001107723582890E+000] equal
+[-2.986699005308296E+000,-2.986699005257203E+000]
+[-2.986699005308296E+000,-2.986699005257203E+000] equal
+[ 1.597335933603854E+003, 1.597335933644755E+003]
+[ 1.597335933603854E+003, 1.597335933644755E+003] equal
+[-7.977831359051215E+002,-7.977831358914918E+002]
+[-7.977831359051215E+002,-7.977831358914918E+002] equal
+[ 1.001106336789175E+000, 1.001106336840378E+000]
+[ 1.001106336789175E+000, 1.001106336840378E+000] equal
+[ 1.002213897506429E+000, 1.002213897711127E+000]
+[ 1.002213897506429E+000, 1.002213897711127E+000] equal
+[ 2.212612838605912E-003, 2.212735960794469E-003]
+[ 2.212612838605912E-003, 2.212735960794469E-003] equal
+[-3.110560697905386E-008, 3.033631124083060E-008]
+[-3.110560697905386E-008, 3.033631124083060E-008] equal
+[ 9.999999384393308E-001, 1.000000061561521E+000]
+[ 9.999999384393308E-001, 1.000000061561521E+000] equal
+[ 9.999986525566055E-001, 9.999988994828022E-001]
+[ 9.999986525566055E-001, 9.999988994828022E-001] equal
+[ 3.908352000696406E-004, 5.883497343004195E-004]
+[ 3.908352000696406E-004, 5.883497343004195E-004] equal
+[-2.941132875244891E-004,-1.954791727376558E-004]
+[-2.941132875244891E-004,-1.954791727376558E-004] equal
+[ 9.999012668993395E-001, 1.000098733094592E+000]
+[ 9.999012668993395E-001, 1.000098733094592E+000] equal
+[ 9.998022868724865E-001, 1.000197713115382E+000]
+[ 9.998022868724865E-001, 1.000197713115382E+000] equal
+[-1.582809001175032E-001, 1.582886994519248E-001]
+[-1.582809001175032E-001, 1.582886994519248E-001] equal
+[-7.903781298350678E-002, 7.903391369521453E-002]
+[-7.903781298350678E-002, 7.903391369521453E-002] equal
+
+Number of equalities                 :24
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester jac_ex.out jac_ex.vgl
+
+
+
+***********************************************************
+ checking program jac_ex.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 5.000000000000000E-001, 5.000000000000000E-001]
+[ 5.000000000000000E-001, 5.000000000000000E-001] equal
+[ 2.500000000000000E-001, 2.500000000000000E-001]
+[ 2.500000000000000E-001, 2.500000000000000E-001] equal
+[ 7.537499999999998E+000, 7.537500000000003E+000]
+[ 7.537499999999998E+000, 7.537500000000003E+000] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[-1.396226415094341E+000,-1.396226415094338E+000]
+[-1.396226415094341E+000,-1.396226415094338E+000] equal
+[-6.981132075471702E-001,-6.981132075471695E-001]
+[-6.981132075471702E-001,-6.981132075471695E-001] equal
+[ 7.433516327255062E+000, 7.433516327255164E+000]
+[ 7.433516327255062E+000, 7.433516327255164E+000] equal
+[-5.329070518200753E-015, 5.329070518200753E-015]
+[-5.329070518200753E-015, 5.329070518200753E-015] equal
+[-7.951902474521198E-001,-7.951902474521101E-001]
+[-7.951902474521198E-001,-7.951902474521101E-001] equal
+[-3.975951237260602E-001,-3.975951237260548E-001]
+[-3.975951237260602E-001,-3.975951237260548E-001] equal
+[-5.935598109066683E+000,-5.935598109066245E+000]
+[-5.935598109066683E+000,-5.935598109066245E+000] equal
+[-5.950795411990841E-014, 5.950795411990841E-014]
+[-5.950795411990841E-014, 5.950795411990841E-014] equal
+[-1.196005361090202E+000,-1.196005361090156E+000]
+[-1.196005361090202E+000,-1.196005361090156E+000] equal
+[-5.980026805451035E-001,-5.980026805450754E-001]
+[-5.980026805451035E-001,-5.980026805450754E-001] equal
+[ 3.312990631505092E+000, 3.312990631508399E+000]
+[ 3.312990631505092E+000, 3.312990631508399E+000] equal
+[-2.957634137601419E-013, 2.957634137601419E-013]
+[-2.957634137601419E-013, 2.957634137601419E-013] equal
+[-1.067378601459599E+000,-1.067378601459413E+000]
+[-1.067378601459599E+000,-1.067378601459413E+000] equal
+[-5.336893007298208E-001,-5.336893007296850E-001]
+[-5.336893007298208E-001,-5.336893007296850E-001] equal
+[-8.293597505247743E-002,-8.293597504056114E-002]
+[-8.293597505247743E-002,-8.293597504056114E-002] equal
+[-1.363353874239694E-012, 1.363353874239694E-012]
+[-1.363353874239694E-012, 1.363353874239694E-012] equal
+[-1.070545193619335E+000,-1.070545193618641E+000]
+[-1.070545193619335E+000,-1.070545193618641E+000] equal
+[-5.352725968097763E-001,-5.352725968092116E-001]
+[-5.352725968097763E-001,-5.352725968092116E-001] equal
+[ 7.613889939950267E-005, 7.613894476232732E-005]
+[ 7.613889939950267E-005, 7.613894476232732E-005] equal
+[-5.458744567476971E-012, 5.456968210637571E-012]
+[-5.458744567476971E-012, 5.456968210637571E-012] equal
+[-1.070542291827324E+000,-1.070542291824693E+000]
+[-1.070542291827324E+000,-1.070542291824693E+000] equal
+[-5.352711459141217E-001,-5.352711459118868E-001]
+[-5.352711459141217E-001,-5.352711459118868E-001] equal
+[-2.492317463520523E-011, 1.481588185470174E-010]
+[-2.492317463520523E-011, 1.481588185470174E-010] equal
+[-2.129141307705142E-011, 2.129052489863172E-011]
+[-2.129141307705142E-011, 2.129052489863172E-011] equal
+
+Number of equalities                 :28
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester lop_ex.out1 lop_ex.vgl1
+
+
+
+***********************************************************
+ checking program lop_ex.out1
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 2.500000000000000E+003, 2.500000000000000E+003]
+[ 2.500000000000000E+003, 2.500000000000000E+003] equal
+[ 1.400000000000000E+001, 1.400000000000000E+001]
+[ 1.400000000000000E+001, 1.400000000000000E+001] equal
+[ 2.000000000000000E+002, 2.000000000000000E+002]
+[ 2.000000000000000E+002, 2.000000000000000E+002] equal
+[ 3.600000000000000E+001, 3.600000000000000E+001]
+[ 3.600000000000000E+001, 3.600000000000000E+001] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[ 5.000000000000000E+001, 5.000000000000000E+001]
+[ 5.000000000000000E+001, 5.000000000000000E+001] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[ 2.000000000000000E+002, 2.000000000000000E+002]
+[ 2.000000000000000E+002, 2.000000000000000E+002] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[ 5.000000000000000E+001, 5.000000000000000E+001]
+[ 5.000000000000000E+001, 5.000000000000000E+001] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[ 2.000000000000000E+002, 2.000000000000000E+002]
+[ 2.000000000000000E+002, 2.000000000000000E+002] equal
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+
+Number of equalities                 :16
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester lop_ex.out2 lop_ex.vgl2
+
+
+
+***********************************************************
+ checking program lop_ex.out2
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+
+Number of equalities                 :0
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester lss_ex.out1 lss_ex.vgl1
+
+
+
+***********************************************************
+ checking program lss_ex.out1
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[-0.000000000000000E+000, 0.000000000000000E+000]
+[-0.000000000000000E+000, 0.000000000000000E+000] equal
+[ 1.000000000000000E+000, 1.000000000000000E+000]
+[ 1.000000000000000E+000, 1.000000000000000E+000] equal
+[-2.000000000000000E+000,-2.000000000000000E+000]
+[-2.000000000000000E+000,-2.000000000000000E+000] equal
+[ 3.000000000000000E+000, 3.000000000000000E+000]
+[ 3.000000000000000E+000, 3.000000000000000E+000] equal
+[-4.000000000000000E+000,-4.000000000000000E+000]
+[-4.000000000000000E+000,-4.000000000000000E+000] equal
+[ 5.000000000000000E+000, 5.000000000000000E+000]
+[ 5.000000000000000E+000, 5.000000000000000E+000] equal
+[-6.000000000000000E+000,-6.000000000000000E+000]
+[-6.000000000000000E+000,-6.000000000000000E+000] equal
+[ 7.000000000000000E+000, 7.000000000000000E+000]
+[ 7.000000000000000E+000, 7.000000000000000E+000] equal
+[-8.000000000000000E+000,-8.000000000000000E+000]
+[-8.000000000000000E+000,-8.000000000000000E+000] equal
+[ 9.000000000000000E+000, 9.000000000000000E+000]
+[ 9.000000000000000E+000, 9.000000000000000E+000] equal
+
+Number of equalities                 :10
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester lss_ex.out2 lss_ex.vgl2
+
+
+
+***********************************************************
+ checking program lss_ex.out2
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[-1.816453967422652E-005,-1.816453967422649E-005]
+[-1.816453967422652E-005,-1.816453967422649E-005] equal
+[-1.811037640972820E-006,-1.811037640972817E-006]
+[-1.811037640972820E-006,-1.811037640972817E-006] equal
+[-3.502843960086125E-006,-3.502843960086122E-006]
+[-3.502843960086125E-006,-3.502843960086122E-006] equal
+[-1.363264420780559E-006,-1.363264420780555E-006]
+[-1.363264420780559E-006,-1.363264420780555E-006] equal
+[ 6.415809271299437E-006, 6.415809271299441E-006]
+[ 6.415809271299437E-006, 6.415809271299441E-006] equal
+[-4.146758952527853E-006,-4.146758952527849E-006]
+[-4.146758952527853E-006,-4.146758952527849E-006] equal
+[ 1.538863294406148E-005, 1.538863294406151E-005]
+[ 1.538863294406148E-005, 1.538863294406151E-005] equal
+[-4.667714520412451E-006,-4.667714520412447E-006]
+[-4.667714520412451E-006,-4.667714520412447E-006] equal
+[-2.652135372382568E-006,-2.652135372382565E-006]
+[-2.652135372382568E-006,-2.652135372382565E-006] equal
+[ 3.011610086225345E-005, 3.011610086225348E-005]
+[ 3.011610086225345E-005, 3.011610086225348E-005] equal
+
+Number of equalities                 :10
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester nlfz_ex.out nlfz_ex.vgl
+
+
+
+***********************************************************
+ checking program nlfz_ex.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 5.885327439797034E-001, 5.885327439840204E-001]
+[ 5.885327439797040E-001, 5.885327439840197E-001] superset
+[ 3.096363932410611E+000, 3.096363932410678E+000]
+[ 3.096363932410611E+000, 3.096363932410677E+000] superset
+[ 6.285049273382584E+000, 6.285049273382589E+000]
+[ 6.285049273382584E+000, 6.285049273382589E+000] equal
+[ 9.424697254681706E+000, 9.424697254772083E+000]
+[ 9.424697254681706E+000, 9.424697254772083E+000] equal
+[ 1.256637410168851E+001, 1.256637410169039E+001]
+[ 1.256637410168851E+001, 1.256637410169039E+001] equal
+[ 1.570796311724485E+001, 1.570796311724937E+001]
+[ 1.570796311724485E+001, 1.570796311724937E+001] equal
+[ 1.884955592762930E+001, 1.884955592835264E+001]
+[ 1.884955592762930E+001, 1.884955592835264E+001] equal
+
+Number of equalities                 :5
+Number of subsets to compare data    :0
+Number of supersets to compare data  :2
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester nlss_ex.out1 nlss_ex.vgl1
+
+
+
+***********************************************************
+ checking program nlss_ex.out1
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+
+Number of equalities                 :0
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester nlss_ex.out2 nlss_ex.vgl2
+
+
+
+***********************************************************
+ checking program nlss_ex.out2
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 8.023509103292850E-001, 8.023509103360040E-001]
+[ 8.023509103292851E-001, 8.023509103360039E-001] superset
+[ 8.023509103313216E-001, 8.023509103339676E-001]
+[ 8.023509103313216E-001, 8.023509103339675E-001] superset
+[ 8.023509103321311E-001, 8.023509103331580E-001]
+[ 8.023509103321312E-001, 8.023509103331579E-001] superset
+[ 8.023509103324552E-001, 8.023509103328338E-001]
+[ 8.023509103324552E-001, 8.023509103328337E-001] superset
+[ 8.023509103325907E-001, 8.023509103326983E-001]
+[ 8.023509103325908E-001, 8.023509103326982E-001] superset
+[ 8.023509103326377E-001, 8.023509103326512E-001]
+[ 8.023509103326379E-001, 8.023509103326512E-001] superset
+
+Number of equalities                 :0
+Number of subsets to compare data    :0
+Number of supersets to compare data  :6
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester rpe_ex.out1 rpe_ex.vgl1
+
+
+
+***********************************************************
+ checking program rpe_ex.out1
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 1.000000000008440E-016, 1.000000000008443E-016]
+[ 1.000000000008440E-016, 1.000000000008443E-016] equal
+
+Number of equalities                 :1
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester rpe_ex.out2 rpe_ex.vgl2
+
+
+
+***********************************************************
+ checking program rpe_ex.out2
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[-1.250000000024569E-016,-1.250000000024565E-016]
+[-1.250000000024569E-016,-1.250000000024565E-016] equal
+
+Number of equalities                 :1
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester xev_ex1.out xev_ex1.vgl
+
+
+
+***********************************************************
+ checking program xev_ex1.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 1.000000000000000E+000, 1.000000000000000E+000]
+[ 1.000000000000000E+000, 1.000000000000000E+000] equal
+
+Number of equalities                 :1
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester xev_ex2.out xev_ex2.vgl
+
+
+
+***********************************************************
+ checking program xev_ex2.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 3.600000000000000E+001, 3.600000000000003E+001]
+[ 3.600000000000000E+001, 3.600000000000003E+001] equal
+
+Number of equalities                 :1
+Number of subsets to compare data    :0
+Number of supersets to compare data  :0
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./tester xev_ex3.out xev_ex3.vgl
+
+
+
+***********************************************************
+ checking program xev_ex3.out
+***********************************************************
+***********************************************************
+*                   start checking data                   *
+***********************************************************
+
+[ 1.782999999999998E+003, 1.783000000000000E+003]
+[ 1.783000000000000E+003, 1.783000000000000E+003] superset
+
+Number of equalities                 :0
+Number of subsets to compare data    :0
+Number of supersets to compare data  :1
+Other relation                       :0
+
+************************************************************
+*                           End                            *
+************************************************************
+cd test; ./sumup
+
+
+
+***********************************************************
+*                      FINAL RESULT                       *
+***********************************************************
+
+Number of equalities :121
+Number of subsets    :0
+Number of supersets  :23
+Other relations      :0
+
+********************************************************
+*     Warning: There are some unexpected solutions!    *
+* It seems one library (C-XSC or CToolbox) in not OK!  *
+*                                                      *
+*                  !!!  CAUTION  !!!                   *
+*                                                      *
+* Do not use this library for interval arithmetic or   *
+*        for numerics with result verification!        *
+*                                                      *
+*   Maybe you can try to compile the library without   *
+*             any compiler optimization                *
+*   (try 'make clean' and afterwards 'install_cxsc')   *
+*                                                      *
+*         If you have continuous problems:             *
+*         e-mail: xsc@math.uni-wuppertal.de            *
+********************************************************
+make[1]: *** [test] Error 1
+make[1]: Leaving directory `/home/anhvt89/Documents/c++lib/cxsc-2-5-4/CToolbox'
+make: *** [toolboxtest_dyn] Error 2
+
+Section: CXSC Results
+=====================
+Library not successfully created
+Examples not successfully created
+Library successfully installed
+
+
+Section: CToolbox Results
+=========================
+Examples successfully created
+Library and programs not successfully installed and tested
+

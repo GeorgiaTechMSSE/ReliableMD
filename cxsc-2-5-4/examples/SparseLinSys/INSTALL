@@ -1,0 +1,48 @@
+Verified Solvers for sparse linear (interval) systems
+===================================================
+
+The SparseLinSys package contains the following verified solvers:
+
+1.A solver (slss) based on the modified Krawczyk operator with 3 methods to solve the
+  occurring triangular systems with interval right hand side: simple forward/backward
+  substitution (only applicable for matrices with special structure, especially M-matrices),
+  inversion of the triangular matrices (very costly in most cases) and forward/backward 
+  substitution using parallel epipeds (works well for very small bandwidth b<10).
+ 
+2.A solver (slssn) based on a normwise error estimation. For point systems and interval
+  systems with small width this solver works best in general, especially for symmetric
+  positive definite systems. However, for general system with condition >10^8 it will 
+  often fail.
+
+Solver 1 gives better enclosures for interval systems, but is somewhat slower and 
+applicable to a smaller class of systems. Solver 2 will be faster in general and gives
+good enclosures for point systems and interval systems with small width. Both can profit
+a lot from multithreading, especially for larger systems. OpenMP should be activated
+if available.
+ 
+
+
+Quick installation instructions:
+
+Requirements:
+-C-XSC version 2.5.4 or higher
+-SuiteSparse, version 4.0.2 or higher (tested with version 4.0.2) using Metis 4.0
+-C++ Compiler with OpenMP capabilities recommended
+-Optimized BLAS and LAPACK libraries recommended (also for the installation of SuiteSparse)
+
+
+Installation:
+-Rename the file Makefile.generic to Makefile 
+-Edit the file according to your needs by following the explanations
+ in the file
+-Type "make lib" to compile the solver library, or just
+ "make" to compile the library and the examples
+-After compilation the library will reside in the lib
+ directory, the needed header files in the include directory
+ and the compiled example program in the bin directory
+
+Take a look at the example files and the header sparselinsys.hpp in the include directory
+for usage details.
+
+
+

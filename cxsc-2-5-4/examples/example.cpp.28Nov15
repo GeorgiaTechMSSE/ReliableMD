@@ -1,0 +1,75 @@
+// #include "example.hpp"
+#include "real.hpp"
+#include "imatrix.hpp"
+#include "ivector.hpp"
+#include "interval.hpp"  // predefined interval arithmetic
+#include "rvector.hpp"
+#include "l_interval.hpp"
+#include <iostream>
+using namespace cxsc;
+using namespace std;
+
+int main()
+{
+  
+  // ********************************************************************************************
+  // comment: can't assign x_ivector[i] as an interval without Resize
+  cout << endl;
+  ivector *x_ivector = new ivector[7];
+  for (int i = 0; i < 7; i++) {
+    Resize(x_ivector[i],1);
+    x_ivector[i] = interval(3*i,-2*i);
+
+    // if don't use Resize()
+    // (*x_ivector)[i+1] = interval(3*i, -2*i);
+  }
+  for (int i = 0; i < 7; i++) {
+    cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+
+    // if don't use Resize()
+    // cout << "x_ivector[" << i+1 << "] = " << x_ivector[i+1] << endl;
+  }
+  cout << "length of x_ivector (after assignment) = " << VecLen(*x_ivector) << endl;
+  cout << endl;
+  cout << "Lb(x_ivector) = " << Lb(*x_ivector) << endl;
+  cout << "Ub(x_ivector) = " << Ub(*x_ivector) << endl;
+
+  // extra test to make sure *x_ivector is working
+  imatrix A(7,7);
+  for (int i = 0; i < 7; i++) {
+      for (int j = 0; j < 7; j++) {
+        A[i+1][j+1] = interval(i,j);
+        cout << "A[" << i+1 << "][" << j+1 << "] = " << A[i+1][j+1] << endl;
+      }
+    }
+
+  cout << endl;
+  ivector product;
+  product = A * (*x_ivector);
+  cout << "VecLen(product) = " << VecLen(product) << endl;
+  for (int i = 0; i < VecLen(product); i++)
+    cout << "product[" << i << "] = " << product[i] << endl;
+
+  delete [] x_ivector;
+  // ********************************************************************************************
+  // // // comment: create the ivector object first, then create a duplicate copy for pointer; seem to work this way
+  cout << "************************************************************************************** " << endl;
+  cout << endl;
+  ivector   x_ivector_obj(7);
+  for (int j = 0; j < 7; j++) {
+    x_ivector_obj[j+1] = interval(3*j,-2*j);
+  } 
+  ivector *x_ivector_ptr = new ivector;
+  *x_ivector_ptr = x_ivector_obj;
+  cout << "VecLen of x_ivector_obj = " << VecLen(x_ivector_obj) << endl;
+  cout << "VecLen of x_ivector_ptr = " << VecLen(*x_ivector_ptr) << endl;
+  cout << endl;
+  for (int j = 0; j < 7; j++) {
+    cout << "x_ivector_ptr[" << j+1 << "] = " << (*x_ivector_ptr)[j+1] << endl;
+  }
+  cout << "Lb(*x_ivector_ptr) = " << Lb(*x_ivector_ptr) << endl;
+  cout << "Lb(x_ivector_obj) = "  << Lb(x_ivector_obj)  << endl;
+  cout << "Ub(*x_ivector_ptr) = " << Ub(*x_ivector_ptr) << endl;
+  cout << "Ub(x_ivector_obj) = "  << Ub(x_ivector_obj)  << endl;
+  delete x_ivector_ptr;
+}

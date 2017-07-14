@@ -1,0 +1,22 @@
+// #include "example.hpp"
+#include "real.hpp"
+#include "imatrix.hpp"
+#include "ivector.hpp"
+#include "interval.hpp"  // predefined interval arithmetic
+#include "rvector.hpp"
+#include "l_interval.hpp"
+#include <iostream>
+using namespace cxsc;
+using namespace std;
+
+int main()
+{
+  double p = 7.4;
+  cout << "double p = " << p << endl;
+  cout << "static_cast<int> (p) = " <<  static_cast<int> (p) << endl;
+
+	interval tmp = interval(3,-2);
+	cout << "tmp = " << tmp << endl;
+	cout << "-tmp = " << -tmp << endl;
+	cout << "exponential(tmp) = " << exponential(tmp) << endl;
+}

@@ -1,0 +1,86 @@
+// #include "example.hpp"
+#include "real.hpp"
+#include "imatrix.hpp"
+#include "ivector.hpp"
+#include "interval.hpp"  // predefined interval arithmetic
+#include "rvector.hpp"
+#include "l_interval.hpp"
+#include <iostream>
+using namespace cxsc;
+using namespace std;
+
+int main()
+{
+  // test construct/destruct ivector
+  // idea: use Resize() function for dynamically-allocated memory
+  // status: work but not fully properly functional, e.g. VecLen() is not working)
+  cout << endl;
+  ivector* x_ivector;
+  x_ivector = new ivector[7];
+  // cout << "length of x_ivector (after defined) = " << VecLen(*x_ivector) << endl;
+  for (int i = 0; i < 7; i++) {
+    Resize(x_ivector[i],1);
+    x_ivector[i] = interval(3*i,-2*i);
+    // x_ivector[i] = 2*i;
+    // cout << "finished assignment" << endl;
+    cout << "2*x_ivector[" << i << "] = " << 2*x_ivector[i] << endl;
+    // if (x_ivector[i]==NULL) {
+    //   cout << "NULL @ [" << i << "] component;" << endl;
+    //   cout << endl;
+    // }
+  }
+
+  // cout << endl;
+  // cout << "exponential(x_ivector[" << 1 << "] = " << exponential(interval(x_ivector[1])) << endl;
+  // cout << endl;
+  // cout << " *= or += with interval(2,-1)" << endl;
+  // cout << endl;
+
+  // for (int i = 0; i < 7; i++) {
+  //   x_ivector[i] = interval(x_ivector[i]) + interval(2,-1);
+  //   cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+  // }
+
+  /*
+  // Jan 20, 2016
+  int tflag = 1;
+  if (tflag) {
+    cout << " check if {} affect the results" << endl;
+    cout << " expect the result to be the same " << endl;
+    for (int i = 0; i < 7; i++) {
+      // x_ivector[i] = interval(x_ivector[i]) + interval(2,-1);
+      cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+    } 
+  } */
+  /* ------------------------------------------------------------------------------ */
+  // cout << endl;
+  // interval *x_interval;
+  // x_interval = new interval;
+  // *x_interval = interval(1,5);
+  // cout << "*x_interval = " << *x_interval << endl;
+
+  // cout << endl;
+  // interval *y_interval;
+  // y_interval = new interval;
+  // *y_interval = interval(3,-2);
+  // cout << "*y_interval = " << *y_interval << endl;
+  // cout << endl;
+  // cout << "(*x_interval) * (*y_interval) = " << (*x_interval) * (*y_interval) << endl;
+  // delete x_interval;
+  // delete y_interval;
+  // cout << endl;
+  /* ------------------------------------------------------------------------------ */
+  // another check for lowerbound showing
+  // double *lowerbound;
+  // lowerbound = new double[7];
+  // for (int i = 0; i < 7; i++)
+  // {
+  //   lowerbound[i] = _double(interval(x_ivector[i]).inf);
+    // cout << interval(x_ivector[i]).inf << endl;
+    // cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+    // cout << "lowerbound[" << i << "] = " << lowerbound[i] << endl;
+    // cout << "interval(x_ivector[" << i << "]) = " << interval(x_ivector[i]) << endl;
+  // }
+  // delete [] x_ivector;
+  // delete [] lowerbound;
+}

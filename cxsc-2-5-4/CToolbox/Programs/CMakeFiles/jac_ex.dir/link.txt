@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3    CMakeFiles/jac_ex.dir/jac_ex.o  -o jac_ex  -L/home/anhvt89/Documents/c++lib/cxsc-2-5-4/cxscbuild/lib -rdynamic ../../libcxsc.so.2.5.4 -Wl,-rpath,/home/anhvt89/Documents/c++lib/cxsc-2-5-4/cxscbuild/lib:/home/anhvt89/Documents/c++lib/cxsc-2-5-4: 

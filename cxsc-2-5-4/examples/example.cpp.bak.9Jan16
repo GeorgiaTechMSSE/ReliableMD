@@ -1,0 +1,28 @@
+// #include "example.hpp"
+#include "real.hpp"
+#include "imatrix.hpp"
+#include "ivector.hpp"
+#include "interval.hpp"  // predefined interval arithmetic
+#include "rvector.hpp"
+#include "l_interval.hpp"
+#include <iostream>
+using namespace cxsc;
+using namespace std;
+
+int main()
+{
+  ivector x_ivector(7);
+  for (int i = 0; i < 7; i++) {
+    x_ivector[i+1] = interval(i-0.5, i+0.5);
+    cout << "x_ivector[" << i+1 << "] = " << x_ivector[i+1] << endl;
+  }
+
+  // lower_bound is a storage of the lowerbound of x_ivector
+  double *lower_bound;  
+  lower_bound = new double[7];
+  for (int i = 0; i < 7; i++) {
+    lower_bound[i] = _double(x_ivector[i+1].inf);
+    cout << "lower_bound[" << i << "] = " << lower_bound[i] << endl;
+  }
+  delete [] lower_bound;
+}

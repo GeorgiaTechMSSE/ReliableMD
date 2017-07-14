@@ -1,0 +1,39 @@
+2
+3
+1
+0.015
+1
+3 0
+0 3
+0 1
+1 0
+0 0
+0 0
+0 0
+0 0
+0 0 1 0
+0 0 0 1
+[1, 2]
+[10, 10.5]
+[10, 10.5]
+
+
+Ausgabe bei Aufruf
+
+   parlinsys_exf < behnke:
+
+n = 2  Sharp  eps =  1.500000000000E-002
+MaxIter = 3
+
+Verified solution enclosure found in:
+[1.643914114162E+000,2.911641441393E+000]
+[1.645590744014E+000,2.909964811542E+000]
+
+Inner Estimation:
+[2.068939994818E+000,2.486615560738E+000]
+[2.069126287024E+000,2.486429268532E+000]
+
+Sharpness of the solution enclosure:
+3.29E-001
+3.30E-001
+

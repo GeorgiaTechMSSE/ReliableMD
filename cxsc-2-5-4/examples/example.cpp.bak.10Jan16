@@ -1,0 +1,51 @@
+// #include "example.hpp"
+#include "real.hpp"
+#include "imatrix.hpp"
+#include "ivector.hpp"
+#include "interval.hpp"  // predefined interval arithmetic
+#include "rvector.hpp"
+#include "l_interval.hpp"
+#include <iostream>
+using namespace cxsc;
+using namespace std;
+
+int main()
+{
+  // test construct/destruct ivector
+  // idea: use Resize() function for dynamically-allocated memory
+  // status: work but not fully properly functional, e.g. VecLen() is not working)
+  cout << endl;
+  ivector* x_ivector;
+  x_ivector = new ivector[7];
+  // cout << "length of x_ivector (after defined) = " << VecLen(*x_ivector) << endl;
+  for (int i = 0; i < 7; i++) {
+    Resize(x_ivector[i],1);
+    x_ivector[i] = interval(3*i,-2*i);
+    // x_ivector[i] = 2*i;
+    // cout << "finished assignment" << endl;
+    cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+    // if (x_ivector[i]==NULL) {
+    //   cout << "NULL @ [" << i << "] component;" << endl;
+    //   cout << endl;
+    // }
+  }
+  cout << "length of x_ivector (after assignment) = " << VecLen(*x_ivector) << endl;
+  cout << "Lb(x_ivector) = " << Lb(*x_ivector) << endl;
+  cout << "Ub(x_ivector) = " << Ub(*x_ivector) << endl;
+
+  // another check for lowerbound showing
+  double *lowerbound;
+  interval a;
+  lowerbound = new double[7];
+  for (int i = 0; i < 7; i++)
+  {
+    // a = x_ivector[i];
+    lowerbound[i] = _double(interval(x_ivector[i]).inf);
+    // cout << interval(x_ivector[i]).inf << endl;
+
+    // cout << "x_ivector[" << i << "] = " << x_ivector[i] << endl;
+    cout << "lowerbound[" << i << "] = " << lowerbound[i] << endl;
+  }
+  delete [] x_ivector;
+  delete [] lowerbound;
+}

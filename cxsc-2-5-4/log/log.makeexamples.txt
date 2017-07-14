@@ -1,0 +1,3 @@
+cd examples;  -mfpmath=sse -msse2 -O3 -fno-strict-aliasing -Wl,-R/home/anhvt89/cxsc/lib -I.. -I../src -I../src/rts -I../src/fi_lib -I../src/asm -L../src -o example example.cpp -lcxsc
+/bin/sh: 1: -mfpmath=sse: not found
+make: *** [example] Error 127
