@@ -1,0 +1,99 @@
+LAMMPS (28 Jun 2014)
+# 2d NEB surface simulation, hop of adatom on surface
+
+dimension	2
+boundary	p s p
+
+atom_style	atomic
+neighbor	0.3 bin
+neigh_modify	delay 5
+atom_modify	map array sort 0 0.0
+
+variable	u uloop 20
+
+# create geometry with adatom
+
+lattice		hex 0.9
+Lattice spacing in x,y,z = 1.1327 1.96189 1.1327
+region		box block 0 20 0 11 -0.25 0.25
+region		box1 block 0 20 0 10 -0.25 0.25
+create_box	3 box
+Created orthogonal box = (0 0 -0.283174) to (22.6539 21.5808 0.283174)
+  1 by 1 by 1 MPI processor grid
+create_atoms	1 region box1
+Created 420 atoms
+create_atoms	1 single 11.5 10.5 0
+Created 1 atoms
+
+mass		* 1.0
+
+# LJ potentials
+
+pair_style	lj/cut 2.5
+pair_coeff	* * 1.0 1.0 2.5
+pair_modify	shift yes
+
+# initial minimization to relax surface
+
+minimize	1.0e-6 1.0e-4 1000 10000
+WARNING: Resetting reneighboring criteria during minimization (../min.cpp:170)
+Memory usage per processor = 3.47673 Mbytes
+Step Temp E_pair E_mol TotEng Press Volume 
+       0            0   -3.0315662            0   -3.0315662   -1.5245774    466.76444 
+      39            0   -3.0514828            0   -3.0514828  -0.56461509    454.32149 
+Loop time of 0.05704 on 1 procs for 39 steps with 421 atoms
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+        -3.03156619455     -3.05147981308      -3.0514828127
+  Force two-norm initial, final = 9.50021 0.414293
+  Force max component initial, final = 1.46877 0.0560911
+  Final line search alpha, max atom move = 0.0078125 0.000438211
+  Iterations, force evaluations = 39 207
+
+Pair  time (%) = 0.0533042 (93.4506)
+Neigh time (%) = 0.000468016 (0.820505)
+Comm  time (%) = 0.000453711 (0.795426)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.00281405 (4.93348)
+
+Nlocal:    421 ave 421 max 421 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    95 ave 95 max 95 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    3587 ave 3587 max 3587 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 3587
+Ave neighs/atom = 8.52019
+Neighbor list builds = 2
+Dangerous builds = 0
+reset_timestep	0
+
+# define groups
+
+region	        1 block INF INF INF 1.25 INF INF
+group		lower region 1
+60 atoms in group lower
+group		mobile subtract all lower
+361 atoms in group mobile
+set		group lower type 2
+  60 settings made for type
+
+timestep	0.05
+
+# group of NEB atoms - either block or single atom ID 421
+
+region		surround block 10 18 17 21 0 0 units box
+group		nebatoms region surround
+22 atoms in group nebatoms
+#group		nebatoms id 421
+set		group nebatoms type 3
+  22 settings made for type
+group		nonneb subtract all nebatoms
+399 atoms in group nonneb
+
+fix		1 lower setforce 0.0 0.0 0.0
+fix		2 nebatoms neb 1.0
+ERROR: Invalid fix style (../modify.cpp:731)

@@ -1,0 +1,10 @@
+There are 4 different sources of R-MD that comes along with the paper: 
+
+Tran, Anh V., and Yan Wang. "Reliable Molecular Dynamics: Uncertainty quantification using interval analysis in molecular dynamics simulation." 
+Computational Materials Science 127 (2017): 141-160.
+
+To compile the source from a specific source folder, use 
+
+make openmpi
+
+While other options are available, they have not been tested under the development process. 

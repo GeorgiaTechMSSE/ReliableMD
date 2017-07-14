@@ -1,0 +1,6 @@
+#!/bin/bash
+make openmpi;
+mv lmp_openmpi ../bench/lmp_openmpi_mod;
+cd ../bench;
+mpirun -v -np 4 lmp_openmpi_mod < in.tensile.atomic_rad.txt -log log.debug.tensile;
+cd ../src;

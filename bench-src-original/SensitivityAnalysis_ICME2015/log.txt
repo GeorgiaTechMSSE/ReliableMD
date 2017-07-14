@@ -1,0 +1,6 @@
+done /home/anhvt89/Documents/lammps-28Jun14/bench-src-original/SensitivityAnalysis/negFRho/
+done /home/anhvt89/Documents/lammps-28Jun14/bench-src-original/SensitivityAnalysis/negPhiR/
+done /home/anhvt89/Documents/lammps-28Jun14/bench-src-original/SensitivityAnalysis/negRhoR/
+done /home/anhvt89/Documents/lammps-28Jun14/bench-src-original/SensitivityAnalysis/posFRho/
+done /home/anhvt89/Documents/lammps-28Jun14/bench-src-original/SensitivityAnalysis/posPhiR/
+done /home/anhvt89/Documents/lammps-28Jun14/bench-src-original/SensitivityAnalysis/posRhoR/

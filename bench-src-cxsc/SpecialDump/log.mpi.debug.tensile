@@ -1,0 +1,18 @@
+LAMMPS (28 Jun 2014)
+# Input file for uniaxial tensile loading of single crystal aluminum
+# Mark Tschopp, November 2010
+# several places to pay attention:
+# 1. atom style
+# 2. pair potential (how many percent of error is associated?)
+# 		> how are the errors are calculated?
+# 3. time step
+# 4. dump to where
+# 5. dump what
+
+# ------------------------ INITIALIZATION ----------------------------
+units 		metal
+dimension	3
+boundary	p	p	p
+atom_style	atomic_rad
+variable 	latparam equal 4.05
+log			log.debug.tensile

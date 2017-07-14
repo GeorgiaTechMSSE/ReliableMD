@@ -1,0 +1,38 @@
+11Mar16 
+	src-cxsc - C-XSC development, interval statistical ensemble
+	src-midpoint-radius - v2.1(?) version
+	src-total-uncertainty - v2.2, v2.3 version
+	src-ublb - v3.1 version, coupled by midpoint	
+	
+12Mar16
+(1) overwrite the source code from the backup version
+	c-xsc: done
+	v2.1: done
+	v2.2: done
+	v3.1: done
+(2) make sure the force computation is correct
+	src-midpoint-radius: take out Signum() function in computing force (pair_eam_rad.cpp for force compute and pair.cpp for virial compute); make completed with no errors
+	src-total-uncertainty: good
+	src-ublb: good
+	src-cxsc: good
+
+13Mar16 
+(1) check if the input file is good
+	src-cxsc: good
+	src-midpoint-radius: good
+	src-total-uncertainty: good
+	src-ublb: good
+(2) rerun the nominal value for sensitivity analysis
+
+15Mar16 
+(done): experiment src-cxsc/pair.cpp // virial_lb[0] += flb[i][0]*xlb[i][0]; before it is flb*x
+(done) implement in pair.cpp to couple the force with kaucher intervals
+note: before it was flb/fub*x and virial_ub/lb_fdotr_compute() are separate
+RESULT: not sound or complete -> not good (for both trials)
+EXPLANATION: because force is computed based on the assumption of centroid of the prisms, so keep fub/flb*x
+
+15Mar16 (done)
+
+BUG: rerun the total-src-uncertainty-(no)abs for all cases - if the 12x12x12 and 14x14x14 are good then only runs the rest
+REASON: pair.cpp and pair_eam_rad.cpp are not updated for the new radius computation
+
