@@ -1,0 +1,5 @@
+make[1]: Entering directory '/home/anhvt89/Documents/lammps-28Jun14/src-cxsc/Obj_openmpi'
+mpic++ -O2 -funroll-loops -fstrict-aliasing -Wall -W -Wno-uninitialized  -DLAMMPS_GZIP   -DFFT_FFTW   -c ../cxscmatr.cpp
+Makefile:104: recipe for target 'cxscmatr.o' failed
+make[1]: Leaving directory '/home/anhvt89/Documents/lammps-28Jun14/src-cxsc/Obj_openmpi'
+Makefile:77: recipe for target 'openmpi' failed

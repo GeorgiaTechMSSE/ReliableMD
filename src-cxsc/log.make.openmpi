@@ -1,0 +1,6 @@
+make[1]: Entering directory `/home/anhvt89/Documents/lammps-28Jun14/src-cxsc/Obj_openmpi'
+mpic++ -O2 -funroll-loops -fstrict-aliasing -Wall -W -Wno-uninitialized -DLAMMPS_GZIP   -DFFT_FFTW   -M ../fix_nh.cpp > fix_nh.d
+make[1]: Leaving directory `/home/anhvt89/Documents/lammps-28Jun14/src-cxsc/Obj_openmpi'
+make[1]: Entering directory `/home/anhvt89/Documents/lammps-28Jun14/src-cxsc/Obj_openmpi'
+mpic++ -O2 -funroll-loops -fstrict-aliasing -Wall -W -Wno-uninitialized  -DLAMMPS_GZIP   -DFFT_FFTW   -c ../fix_nh.cpp
+make[1]: Leaving directory `/home/anhvt89/Documents/lammps-28Jun14/src-cxsc/Obj_openmpi'

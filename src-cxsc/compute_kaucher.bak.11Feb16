@@ -1,0 +1,453 @@
+/* ----------------------------------------------------------------------
+   compute forces based on Kaucher interval arithmetic
+------------------------------------------------------------------------- */
+void PairEAMRad::compute_kaucher(int eflag, int vflag)
+{
+
+  int i,j,ii,jj,m,inum,jnum,itype,jtype;
+  double xtmp,ytmp,ztmp,delx,dely,delz,evdwl,fpair;
+  double rsq,r,p,rhoip,rhojp,z2,z2p,recip,phip,psip,phi;
+  double *coeff; 
+
+  // note: some variables are defined but not used
+  // par
+  double xtmp_ub,ytmp_ub,ztmp_ub,delx_ub,dely_ub,delz_ub,evdwl_ub,fpair_ub;
+  double xtmp_lb,ytmp_lb,ztmp_lb,delx_lb,dely_lb,delz_lb,evdwl_lb,fpair_lb;
+  double rsq_ub,r_ub,p_ub,rhoip_ub,rhojp_ub,z2_ub,z2p_ub,recip_ub,phip_ub,psip_ub,phi_ub;
+  double rsq_lb,r_lb,p_lb,rhoip_lb,rhojp_lb,z2_lb,z2p_lb,recip_lb,phip_lb,psip_lb,phi_lb;
+  int m_ub,m_lb;
+  double *coeff_ub, *coeff_lb;
+
+  // add rad variables
+  double xtmprad,ytmprad,ztmprad;
+  double delxrad,delyrad,delzrad; 
+  
+  int *ilist,*jlist,*numneigh,**firstneigh;
+
+  evdwl = 0.0;
+  if (eflag || vflag) ev_setup(eflag,vflag);
+  else evflag = vflag_fdotr = eflag_global = eflag_atom = 0;
+
+  // grow energy and fp arrays if necessary
+  // need to be atom->nmax in length
+
+  if (atom->nmax > nmax) {
+    memory->destroy(rho);
+    memory->destroy(fp);
+
+    // par
+    memory->destroy(rho_ub);
+    memory->destroy(rho_lb);
+    memory->destroy(fp_ub);
+    memory->destroy(fp_lb);
+
+    nmax = atom->nmax;
+    memory->create(rho,nmax,"pair:rho");
+    memory->create(fp,nmax,"pair:fp");
+
+    // par
+    memory->create(rho_ub,nmax,"pair:rho_ub");
+    memory->create(rho_lb,nmax,"pair:rho_lb");
+    memory->create(fp_ub,nmax,"pair:fp_ub");
+    memory->create(fp_lb,nmax,"pair:fp_lb");
+  }
+
+  double **x = atom->x;
+  double **xub = atom->xub;
+  double **xlb = atom->xlb;
+  double **f = atom->f;
+  double **fub = atom->fub;
+  double **flb = atom->flb;
+
+  int *type = atom->type;
+  int nlocal = atom->nlocal;
+  int nall = nlocal + atom->nghost;
+  int newton_pair = force->newton_pair;
+
+  inum = list->inum;
+  ilist = list->ilist;
+  numneigh = list->numneigh;
+  firstneigh = list->firstneigh;
+
+  // zero out density
+
+  if (newton_pair) {
+    for (i = 0; i < nall; i++){
+      rho[i] = 0.0;
+      rho_ub[i] = 0.0; // upperbound
+      rho_lb[i] = 0.0; // lowerbound
+    }
+  } else for (i = 0; i < nlocal; i++){
+      rho[i] = 0.0;
+      rho_ub[i] = 0.0; // upperbound
+      rho_lb[i] = 0.0; // lowerbound
+  }
+
+  // rho = density at each atom
+  // loop over neighbors of my atoms
+
+
+
+
+
+
+  // AT: compute rho_ub[*] array - based on the lower bound of position xlb[*][*]
+
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    xtmp = xlb[i][0]; // lowerbound
+    ytmp = xlb[i][1]; // lowerbound
+    ztmp = xlb[i][2]; // lowerbound
+
+    itype = type[i];
+    jlist = firstneigh[i];
+    jnum = numneigh[i];
+
+    for (jj = 0; jj < jnum; jj++) {
+      j = jlist[jj];
+      j &= NEIGHMASK;
+
+      delx = xtmp - xlb[j][0]; // lowerbound
+      dely = ytmp - xlb[j][1]; // lowerbound
+      delz = ztmp - xlb[j][2]; // lowerbound
+
+      rsq = delx*delx + dely*dely + delz*delz;
+
+      if (rsq < cutforcesq) {
+        jtype = type[j];
+        p = sqrt(rsq)*rdr + 1.0;
+        m = static_cast<int> (p);
+        m = MIN(m,nr-1);
+        p -= m;
+        p = MIN(p,1.0);
+        coeff = rhor_spline[type2rhor[jtype][itype]][m];
+        rho[i] += ((coeff[3]*p + coeff[4])*p + coeff[5])*p + coeff[6];
+        if (newton_pair || j < nlocal) {
+          coeff = rhor_spline[type2rhor[itype][jtype]][m];
+          rho[j] += ((coeff[3]*p + coeff[4])*p + coeff[5])*p + coeff[6];
+        }
+      }
+    }
+  }
+
+  // communicate and sum densities
+
+  if (newton_pair) comm->reverse_comm_pair(this);
+
+  // AT: cast rho[j] array into rho_ub[j] array
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    rho_ub[i] = rho[i];
+  }
+  // zero out density
+  if (newton_pair) {
+    for (i = 0; i < nall; i++){
+      rho[i] = 0.0;
+    }
+  } else for (i = 0; i < nlocal; i++){
+      rho[i] = 0.0;
+  }
+
+
+
+
+
+  // AT: compute rho_lb[*] array - based on the lower bound of position xub[*][*]
+
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    xtmp = xub[i][0]; // upperbound
+    ytmp = xub[i][1]; // upperbound
+    ztmp = xub[i][2]; // upperbound
+
+    itype = type[i];
+    jlist = firstneigh[i];
+    jnum = numneigh[i];
+
+    for (jj = 0; jj < jnum; jj++) {
+      j = jlist[jj];
+      j &= NEIGHMASK;
+
+      delx = xtmp - xub[j][0]; // upperbound
+      dely = ytmp - xub[j][1]; // upperbound
+      delz = ztmp - xub[j][2]; // upperbound
+
+      rsq = delx*delx + dely*dely + delz*delz;
+
+      if (rsq < cutforcesq) {
+        jtype = type[j];
+        p = sqrt(rsq)*rdr + 1.0;
+        m = static_cast<int> (p);
+        m = MIN(m,nr-1);
+        p -= m;
+        p = MIN(p,1.0);
+        coeff = rhor_spline[type2rhor[jtype][itype]][m];
+        rho[i] += ((coeff[3]*p + coeff[4])*p + coeff[5])*p + coeff[6];
+        if (newton_pair || j < nlocal) {
+          coeff = rhor_spline[type2rhor[itype][jtype]][m];
+          rho[j] += ((coeff[3]*p + coeff[4])*p + coeff[5])*p + coeff[6];
+        }
+      }
+    }
+  }
+
+  // communicate and sum densities
+  if (newton_pair) comm->reverse_comm_pair(this);
+  // AT: cast rho[j] array into rho_ub[j] array
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    rho_lb[i] = rho[i];
+  }
+  // zero out density
+  if (newton_pair) {
+    for (i = 0; i < nall; i++){
+      rho[i] = 0.0;
+    }
+  } else for (i = 0; i < nlocal; i++){
+      rho[i] = 0.0;
+  }
+
+
+
+
+
+  // AT: compute fp_ub[*] based on rho_lb[*]
+
+  // fp = derivative of embedding energy at each atom
+  // phi = embedding energy at each atom
+  // if rho > rhomax (e.g. due to close approach of two atoms),
+  //   will exceed table, so add linear term to conserve energy
+
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    p = rho_lb[i]*rdrho + 1.0; // lowerbound
+    m = static_cast<int> (p);
+    m = MAX(1,MIN(m,nrho-1));
+    p -= m;
+    p = MIN(p,1.0);
+    coeff = frho_spline[type2frho[type[i]]][m];
+    fp[i] = (coeff[0]*p + coeff[1])*p + coeff[2];
+    if (eflag) {
+      phi = ((coeff[3]*p + coeff[4])*p + coeff[5])*p + coeff[6];
+      if (rho_lb[i] > rhomax) phi += fp[i] * (rho_lb[i]-rhomax); // lowerbound
+      if (eflag_global) eng_vdwl += phi;
+      if (eflag_atom) eatom[i] += phi;
+    }
+  }
+  // communicate derivative of embedding function
+  comm->forward_comm_pair(this);
+  // cast fp[i] into fp_ub[i]
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    fp_ub[i] = fp[i]; // upperbound
+  }
+  // zero out fp
+  if (newton_pair) {
+    for (i = 0; i < nall; i++){
+      fp[i] = 0.0;
+    }
+  } else for (i = 0; i < nlocal; i++){
+      fp[i] = 0.0;
+  }
+
+
+
+
+  // AT: compute fp_lb[*] based on rho_ub[*]
+
+  // fp = derivative of embedding energy at each atom
+  // phi = embedding energy at each atom
+  // if rho > rhomax (e.g. due to close approach of two atoms),
+  //   will exceed table, so add linear term to conserve energy
+
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    p = rho_ub[i]*rdrho + 1.0; // upperbound
+    m = static_cast<int> (p);
+    m = MAX(1,MIN(m,nrho-1));
+    p -= m;
+    p = MIN(p,1.0);
+    coeff = frho_spline[type2frho[type[i]]][m];
+    fp[i] = (coeff[0]*p + coeff[1])*p + coeff[2];
+    if (eflag) {
+      phi = ((coeff[3]*p + coeff[4])*p + coeff[5])*p + coeff[6];
+      if (rho_ub[i] > rhomax) phi += fp[i] * (rho_ub[i]-rhomax); // upperbound
+      if (eflag_global) eng_vdwl += phi;
+      if (eflag_atom) eatom[i] += phi;
+    }
+  }
+  // communicate derivative of embedding function
+  comm->forward_comm_pair(this);
+  // cast fp[i] into fp_lb[i]
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    fp_lb[i] = fp[i]; // lower bound
+  }
+  // zero out fp
+  if (newton_pair) {
+    for (i = 0; i < nall; i++){
+      fp[i] = 0.0;
+    }
+  } else for (i = 0; i < nlocal; i++){
+      fp[i] = 0.0;
+  }
+
+
+  // sync to ivector 
+  for (int i = 0; i < inum; i++) {
+    ivector_fp[i]  = interval(fp_lb[i],fp_ub[i]);
+    ivector_rho[i] = interval(rho_lb[i],rho_ub[i]);
+  }  
+
+
+
+
+
+
+  // compute interval forces on each atom
+  // loop over neighbors of my atoms
+
+  for (ii = 0; ii < inum; ii++) {
+    i = ilist[ii];
+    xtmp_ub = xub[i][0];
+    ytmp_ub = xub[i][1];
+    ztmp_ub = xub[i][2];
+
+    xtmp_lb = xlb[i][0];
+    ytmp_lb = xlb[i][1];
+    ztmp_lb = xlb[i][2];
+
+    itype = type[i];
+
+    jlist = firstneigh[i];
+    jnum = numneigh[i];
+
+    for (jj = 0; jj < jnum; jj++) {
+      j = jlist[jj];
+      j &= NEIGHMASK;
+
+      delx_ub = xtmp_ub - xub[j][0];
+      dely_ub = ytmp_ub - xub[j][1];
+      delz_ub = ztmp_ub - xub[j][2];
+
+      delx_lb = xtmp_lb - xlb[j][0];
+      dely_lb = ytmp_lb - xlb[j][1];
+      delz_lb = ztmp_lb - xlb[j][2];
+
+      // add rad arguments
+      double xtmprad,ytmprad,ztmprad;
+      double delxrad,delyrad,delzrad; 
+      double fradpair;
+
+      rsq = delx*delx + dely*dely + delz*delz;
+      rsq_ub = delx_ub*delx_ub + dely_ub*dely_ub + delz_ub*delz_ub;
+      rsq_lb = delx_lb*delx_lb + dely_lb*dely_lb + delz_lb*delz_lb;
+
+      if (rsq_ub < cutforcesq || rsq_lb < cutforcesq) {  // modify condition
+        jtype = type[j];
+        r = sqrt(rsq);
+        r_ub = sqrt(rsq_ub);
+        r_lb = sqrt(rsq_lb);
+
+        p_ub = r_ub*rdr + 1.0;
+        m_ub = static_cast<int> (p_ub);
+        m_ub = MIN(m_ub,nr-1);
+        p_ub -= m_ub;
+        p_ub = MIN(p_ub,1.0);
+
+        p_lb = r_lb*rdr + 1.0;
+        m_lb = static_cast<int> (p_lb);
+        m_lb = MIN(m_lb,nr-1);
+        p_lb -= m_lb;
+        p_lb = MIN(p_lb,1.0);
+
+        // rhoip = derivative of (density at atom j due to atom i)
+        // rhojp = derivative of (density at atom i due to atom j)
+        // phi = pair potential energy
+        // phip = phi'
+        // z2 = phi * r
+        // z2p = (phi * r)' = (phi' r) + phi
+        // psip needs both fp[i] and fp[j] terms since r_ij appears in two
+        //   terms of embed eng: Fi(sum rho_ij) and Fj(sum rho_ji)
+        //   hence embed' = Fi(sum rho_ij) rhojp + Fj(sum rho_ji) rhoip
+
+        coeff_ub = rhor_spline[type2rhor[itype][jtype]][m_ub];
+        rhoip_ub = (coeff[0]*p_ub + coeff[1])*p_ub + coeff[2]; // index 1 - minus error function assoc w/ r_ub
+        coeff_ub = rhor_spline[type2rhor[jtype][itype]][m_ub];
+        rhojp_ub = (coeff[0]*p_ub + coeff[1])*p_ub + coeff[2]; // index 2 - minus error function assoc w/ r_ub
+        coeff_ub = z2r_spline[type2z2r[itype][jtype]][m_ub];
+        z2p_ub = (coeff[0]*p_ub + coeff[1])*p_ub + coeff[2];
+        z2_ub = ((coeff[3]*p_ub + coeff[4])*p_ub + coeff[5])*p_ub + coeff[6];
+        recip_ub = 1.0/r_ub;
+        phi_ub = z2_ub*recip_ub;
+        phip_ub = z2p_ub*recip_ub - phi_ub*recip_ub; // index 3 - minus error function assoc w/ r_ub
+
+
+        coeff_lb = rhor_spline[type2rhor[itype][jtype]][m_lb];
+        rhoip_lb = (coeff[0]*p_lb + coeff[1])*p_lb + coeff[2]; // index 4 - plus error function assoc w/ r_lb
+        coeff_lb = rhor_spline[type2rhor[jtype][itype]][m_lb];
+        rhojp_lb = (coeff[0]*p_lb + coeff[1])*p_lb + coeff[2]; // index 5 - plus error function assoc w/ r_lb
+        coeff_lb = z2r_spline[type2z2r[itype][jtype]][m_lb];
+        z2p_lb = (coeff[0]*p_lb + coeff[1])*p_lb + coeff[2];
+        z2_lb = ((coeff[3]*p_lb + coeff[4])*p_lb + coeff[5])*p_lb + coeff[6];
+        recip_lb = 1.0/r_lb;
+        phi_lb = z2_lb*recip_lb;
+        phip_lb = z2p_lb*recip_lb - phi_lb*recip_lb; // index 6 - plus error function assoc w/ r_lb
+
+        recip = 1.0/r;
+
+        // computes force interval
+        interval tmp_psip;
+        interval tmp_fpair;
+        interval tmp_f;
+
+        tmp_psip = interval(fp_lb[i],fp_ub[i]) * interval(rhojp_lb,rhojp_ub) + interval(fp_lb[j],fp_ub[j]) * interval(rhoip_lb,rhoip_ub) + interval(phip_lb,phip_ub);
+        tmp_fpair = -interval(tmp_psip) * recip;
+
+
+        // psip_ub = fp_ub[i]*rhojp_ub + fp_ub[j]*rhoip_ub + phip_ub;
+        // fpair_ub = -psip_ub*recip; 
+        // psip_lb = fp_lb[i]*rhojp_lb + fp_lb[j]*rhoip_lb + phip_lb;
+        // fpair_lb = -psip_lb*recip; 
+
+        fub[i][0] += delx * _double(tmp_fpair.sup); 
+        fub[i][1] += dely * _double(tmp_fpair.sup); 
+        fub[i][2] += delz * _double(tmp_fpair.sup); 
+
+        flb[i][0] += delx * _double(tmp_fpair.inf); 
+        flb[i][1] += dely * _double(tmp_fpair.inf); 
+        flb[i][2] += delz * _double(tmp_fpair.inf); 
+                
+        if (newton_pair || j < nlocal) {
+          fub[j][0] -= delx * _double(tmp_fpair.sup); 
+          fub[j][1] -= dely * _double(tmp_fpair.sup);
+          fub[j][2] -= delz * _double(tmp_fpair.sup);
+
+          flb[i][0] -= delx * _double(tmp_fpair.inf); 
+          flb[i][1] -= dely * _double(tmp_fpair.inf); 
+          flb[i][2] -= delz * _double(tmp_fpair.inf); 
+        }
+
+        if (eflag) evdwl = phi;
+        // if no flag then run this
+        if (evflag) ev_tally_ub(i,j,nlocal,newton_pair,evdwl,0.0,_double(tmp_fpair.sup),delx_ub,dely_ub,delz_ub);
+        if (evflag) ev_tally_lb(i,j,nlocal,newton_pair,evdwl,0.0,_double(tmp_fpair.inf),delx_lb,dely_lb,delz_lb);
+      }
+    }
+  }
+
+  if (vflag_fdotr) virial_fdotr_compute();
+  
+  // int vflag_fdotr_ub = vflag_fdotr;
+  if (vflag_fdotr_ub) virial_ub_fdotr_compute();
+  if (vflag_fdotr_lb) virial_lb_fdotr_compute();
+  ub_reset_flag = 0;
+  lb_reset_flag = 0;
+
+  // rad version
+  if (atom->xrad_flag && atom->vrad_flag && atom->frad_flag) {
+    update_virial_rad();
+    // std::cout << "update_virial_rad() used" << std::endl;
+  }
+
+}
