@@ -1,3 +1,6 @@
+# reliableMD
+A reliable molecular dynamics simulation with the consideration of model-form uncertainty in interatomic potential
+
 There are 4 different sources of R-MD that comes along with the paper: 
 
 Tran, Anh V., and Yan Wang. "Reliable Molecular Dynamics: Uncertainty quantification using interval analysis in molecular dynamics simulation." 
@@ -13,10 +16,15 @@ While other compiling options are available, they have not been tested under the
 They are modified from the LAMMPS (lammps.sandia.gov) of the 28Jun14 version.
 
 src-cxsc: interval statistical ensemble scheme
+
 src-midpoint-radius: mid-point radius scheme 
+
 src-original: original source lammps-28Jun14
+
 src-total-uncertainty-abs: total uncertainty principle scheme with a fixed percentage value of absolute atoms' velocities
+
 src-total-uncertainty-noabs: total uncertainty principle scheme with a fixed percentage value of atoms' velocities
+
 src-ublb: lower-upper bounds scheme 
 
 For the src-cxsc, one needs to install a modified version C-XSC v2.5.4 in the cxsc-2-5-4. 
